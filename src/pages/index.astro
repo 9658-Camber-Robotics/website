@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
@@ -9,56 +9,57 @@ import Layout from '../layouts/Layout.astro';
 	url="https://camberrobotics.com"
 >
 	<!-- Hero Section -->
-	<section id="hero" class="bg-black text-white py-32 px-6 overflow-hidden min-h-screen flex items-center">
+	<section id="hero" class="bg-black text-white py-16 sm:py-24 lg:py-32 px-4 sm:px-6 overflow-hidden min-h-screen flex items-center">
 		<div class="max-w-6xl mx-auto text-center">
-			<h1 class="text-5xl md:text-7xl font-bold mb-6 decoration-4 underline-offset-8">
+			<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
 				<span class="inline-block">9658:</span>
 				<span class="typewriter-container">
-    <span id="typewriter-text" class="typewriter-text"></span>
-    <span class="typewriter-cursor">|</span>
-   </span>
+     <span id="typewriter-text" class="typewriter-text"></span>
+     <span class="typewriter-cursor">|</span>
+    </span>
 			</h1>
-			<p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-2000">
+			<p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-2000">
 				We aim to create a robotics culture that values collaboration as much as innovation.
 			</p>
 		</div>
 	</section>
 
 	<!-- Mission Section -->
-	<section id="mission" class="py-32 px-6 bg-black">
+	<section id="mission" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black">
 		<div class="max-w-4xl mx-auto text-center scroll-animate">
-			<h3 class="text-4xl font-bold text-white mb-8 underline decoration-4 underline-offset-8">
+			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 sm:mb-8 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
 				Our Mission
 			</h3>
-			<p class="text-lg text-gray-300 leading-relaxed">
+			<p class="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
 				We want to unite the worlds of STEM and the humanities: technical skills can be acquired and refined over time, but soft skills like communication, collaboration, and adaptability form the foundation of innovation and teamwork.
 			</p>
 		</div>
 	</section>
 
 	<!-- Community Section -->
-	<section id="community" class="py-32 px-6 bg-black text-white relative">
-		<img src="/community.avif" alt="" class="absolute right-10 top-1/3 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl" />
+	<section id="community" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white relative">
+		<img src="/community.avif" alt="" class="hidden lg:block absolute right-10 top-1/3 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl" />
 		<div class="max-w-5xl mx-auto scroll-animate relative z-10">
-			<h3 class="text-4xl font-bold text-center mb-8 underline decoration-4 underline-offset-8">Our Community</h3>
-			<div class="grid md:grid-cols-2 gap-12 items-center">
-				<div class="scroll-animate-left md:pl-12">
-					<p class="text-lg text-gray-200 leading-relaxed mb-6">
+			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Our Community</h3>
+			<div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+				<div class="scroll-animate-left lg:pl-12">
+					<img src="/community.avif" alt="Community" class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6" />
+					<p class="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed mb-4 sm:mb-6">
 						<span class="text-white font-semibold">Camber = Diverse.</span> We strive to build an inclusive team that encourages collaboration. Our members come from Hispanic, LGBTQ+, and other backgrounds underrepresented in STEM.
 					</p>
-					<p class="text-lg text-gray-200 leading-relaxed">
+					<p class="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
 						Our team includes people with a broad range of interests representing the next generation of many fields:
 					</p>
 				</div>
-				<div class="scroll-animate-right md:pl-16">
-					<ul class="space-y-3 text-lg text-white">
-						<li class="flex items-center stagger-item"><span class="w-3 h-3 bg-white rounded-full mr-4 pulse-dot"></span>Engineering</li>
-						<li class="flex items-center stagger-item"><span class="w-3 h-3 bg-white rounded-full mr-4 pulse-dot"></span>Graphic design</li>
-						<li class="flex items-center stagger-item"><span class="w-3 h-3 bg-white rounded-full mr-4 pulse-dot"></span>Business</li>
-						<li class="flex items-center stagger-item"><span class="w-3 h-3 bg-white rounded-full mr-4 pulse-dot"></span>Computer science</li>
-						<li class="flex items-center stagger-item"><span class="w-3 h-3 bg-white rounded-full mr-4 pulse-dot"></span>The humanities</li>
-						<li class="flex items-center stagger-item"><span class="w-3 h-3 bg-white rounded-full mr-4 pulse-dot"></span>Political science</li>
-						<li class="flex items-center stagger-item"><span class="w-3 h-3 bg-white rounded-full mr-4 pulse-dot"></span>And more!</li>
+				<div class="scroll-animate-right lg:pl-16">
+					<ul class="space-y-2 sm:space-y-3 text-sm sm:text-base lg:text-lg text-white">
+						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Engineering</li>
+						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Graphic design</li>
+						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Business</li>
+						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Computer science</li>
+						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>The humanities</li>
+						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Political science</li>
+						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>And more!</li>
 					</ul>
 				</div>
 			</div>
@@ -66,33 +67,35 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<!-- Story Section -->
-	<section id="story" class="py-32 px-6 bg-black text-white relative">
-		<img src="/our_story.avif" alt="" class="absolute left-10 top-1/10 transform -translate-y-1/2 w-96 h-64 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl" style="animation-delay: 1s;" />
+	<section id="story" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white relative">
+		<img src="/our_story.avif" alt="" class="hidden lg:block absolute left-10 top-1/10 transform -translate-y-1/2 w-96 h-64 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl animation-delay-1s" />
 		<div class="max-w-4xl mx-auto scroll-animate relative z-10">
-			<h3 class="text-4xl font-bold text-center mb-12 underline decoration-4 underline-offset-8">Our Story</h3>
-			<p class="text-lg leading-relaxed text-gray-200">
+			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Our Story</h3>
+			<img src="/our_story.avif" alt="Our Story" class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6 sm:mb-8" />
+			<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200">
 				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. Last year, our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom. Still, we managed to custom-design, build, and program a robot by the 2024 San Antonio competition and achieved <span class="font-semibold text-white highlight-text">highest-placed rookie team</span>. This year, under the guidance of a more experienced mentor, the BroncBotz (3481), our team managed to win the <span class="font-semibold text-white highlight-text">Judge's Choice Award</span> at the Houston competition and went on to win the <span class="font-semibold text-white highlight-text">Rising All-Star award</span> at state.
 			</p>
 		</div>
 	</section>
 
 	<!-- Outreach Section -->
-	<section id="outreach" class="py-32 px-6 bg-black relative">
-		<img src="/outreach_and_service.avif" alt="" class="absolute right-20 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl" style="animation-delay: 2s;" />
+	<section id="outreach" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black relative">
+		<img src="/outreach_and_service.avif" alt="" class="hidden lg:block absolute right-20 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl animation-delay-2s" />
 		<div class="max-w-4xl mx-auto scroll-animate relative z-20">
-			<h3 class="text-4xl font-bold text-white text-center mb-12 underline decoration-4 underline-offset-8">
+			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-12 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
 				Our Outreach & Service
 			</h3>
-			<div class="grid md:grid-cols-2 gap-8">
+			<img src="/outreach_and_service.avif" alt="Outreach and Service" class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6 sm:mb-8" />
+			<div class="grid md:grid-cols-2 gap-6 sm:gap-8">
 				<div class="scroll-animate-left">
-					<h4 class="text-2xl font-bold mb-4 text-white underline decoration-2 underline-offset-4">Fundraising</h4>
-					<p class="text-lg leading-relaxed text-gray-200">
+					<h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 text-white underline decoration-2 underline-offset-4">Fundraising</h4>
+					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200">
 						During the 2024 season, we raised nearly <span class="font-semibold text-white highlight-text">$10,000</span> through connecting with FRC-related organizations and local businesses; this amount was matched by Keystone.
 					</p>
 				</div>
 				<div class="scroll-animate-right">
-					<h4 class="text-2xl font-bold mb-4 text-white underline decoration-2 underline-offset-4">Community Impact</h4>
-					<p class="text-lg leading-relaxed text-gray-200">
+					<h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 text-white underline decoration-2 underline-offset-4">Community Impact</h4>
+					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200">
 						Our leadership runs SA Smart, a nonprofit for water conservation. Our team includes NHS officers with <span class="font-semibold text-white highlight-text">4000+ volunteer hours</span> combined.
 					</p>
 				</div>
@@ -101,28 +104,28 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<!-- Partners Section -->
-	<section id="partners" class="py-32 px-6 bg-black">
+	<section id="partners" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black">
 		<div class="max-w-6xl mx-auto scroll-animate">
-			<h3 class="text-4xl font-bold text-center mb-12 text-white underline decoration-4 underline-offset-8">Partners</h3>
-			<div class="flex flex-col items-center gap-12">
-				<div class="flex justify-center items-center gap-16 flex-wrap">
-					<img src="/Keystone.png" alt="Keystone School" class="h-32 max-w-[320px] object-contain hover:scale-125 hover:rotate-3 transition-all duration-500 ease-in-out float-animation" style="animation-delay: 0s;" />
-					<img src="/Artpace.svg" alt="Artpace" class="h-32 max-w-[320px] object-contain hover:scale-125 hover:-rotate-3 transition-all duration-500 ease-in-out float-animation" style="animation-delay: 1s;" />
-					<img src="/FRC.png" alt="FIRST Robotics Competition" class="h-32 max-w-[320px] object-contain hover:scale-125 hover:rotate-2 transition-all duration-500 ease-in-out float-animation" style="animation-delay: 2s;" />
+			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-white underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Partners</h3>
+			<div class="flex flex-col items-center gap-8 sm:gap-12">
+				<div class="flex justify-center items-center gap-4 sm:gap-8 lg:gap-16 flex-wrap">
+					<img src="/Keystone.png" alt="Keystone School" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-0s" />
+					<img src="/Artpace.svg" alt="Artpace" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-1s" />
+					<img src="/FRC.png" alt="FIRST Robotics Competition" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-2s" />
 				</div>
-				<div class="flex justify-center items-center gap-16 flex-wrap">
-					<img src="/TheHomeDepot.svg" alt="The Home Depot" class="h-32 max-w-[320px] object-contain hover:scale-125 hover:-rotate-2 transition-all duration-500 ease-in-out float-animation" style="animation-delay: 0.5s;" />
-					<img src="/Lowes.svg" alt="Lowe's" class="h-32 max-w-[320px] object-contain hover:scale-125 hover:rotate-1 transition-all duration-500 ease-in-out float-animation" style="animation-delay: 1.5s;" />
+				<div class="flex justify-center items-center gap-4 sm:gap-8 lg:gap-16 flex-wrap">
+					<img src="/TheHomeDepot.svg" alt="The Home Depot" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-0-5s" />
+					<img src="/Lowes.svg" alt="Lowe's" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-1 transition-all duration-500 ease-in-out float-animation animation-delay-1-5s" />
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Build Section -->
-	<section id="build" class="py-32 px-6 bg-black text-white">
+	<section id="build" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white">
 		<div class="max-w-4xl mx-auto text-center scroll-animate">
-			<h3 class="text-4xl font-bold mb-8 underline decoration-4 underline-offset-8">Our Build</h3>
-			<p class="text-xl leading-relaxed text-gray-200">
+			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Our Build</h3>
+			<p class="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-200">
 				Our robot's foundation is an <span class="font-semibold text-white highlight-text">MK4i Swerve drivetrain</span>; it is the most maneuverable drivetrain in FRC.
 			</p>
 		</div>
@@ -138,8 +141,21 @@ import Layout from '../layouts/Layout.astro';
 		#hero {
 			position: relative;
 			top: 0;
-			margin-top: -50px;
-			padding-top: calc(2rem + 50px);
+			margin-top: -25px;
+			padding-top: calc(1rem + 25px);
+		}
+
+		@media (min-width: 640px) {
+			#hero {
+				margin-top: -50px;
+				padding-top: calc(1.5rem + 50px);
+			}
+		}
+
+		@media (min-width: 1024px) {
+			#hero {
+				padding-top: calc(2rem + 50px);
+			}
 		}
 
 		@keyframes fadeInUp {
@@ -150,28 +166,6 @@ import Layout from '../layouts/Layout.astro';
 			to {
 				opacity: 1;
 				transform: translateY(0);
-			}
-		}
-
-		@keyframes fadeInLeft {
-			from {
-				opacity: 0;
-				transform: translateX(-30px);
-			}
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
-
-		@keyframes fadeInRight {
-			from {
-				opacity: 0;
-				transform: translateX(30px);
-			}
-			to {
-				opacity: 1;
-				transform: translateX(0);
 			}
 		}
 
@@ -216,13 +210,17 @@ import Layout from '../layouts/Layout.astro';
 			}
 		}
 
-		.animate-fade-in-up {
-			animation: fadeInUp 1s ease-out;
+		@keyframes blink {
+			0%, 50% {
+				opacity: 1;
+			}
+			51%, 100% {
+				opacity: 0;
+			}
 		}
 
-		.animation-delay-300 {
-			animation-delay: 0.3s;
-			animation-fill-mode: both;
+		.animate-fade-in-up {
+			animation: fadeInUp 1s ease-out;
 		}
 
 		.scroll-animate {
@@ -286,26 +284,15 @@ import Layout from '../layouts/Layout.astro';
 			animation: highlightGlow 2s ease-in-out infinite;
 		}
 
-		.stagger-item:nth-child(1).animate { transition-delay: 0.1s; }
-		.stagger-item:nth-child(2).animate { transition-delay: 0.2s; }
-		.stagger-item:nth-child(3).animate { transition-delay: 0.3s; }
-		.stagger-item:nth-child(4).animate { transition-delay: 0.4s; }
-		.stagger-item:nth-child(5).animate { transition-delay: 0.5s; }
-		.stagger-item:nth-child(6).animate { transition-delay: 0.6s; }
-		.stagger-item:nth-child(7).animate { transition-delay: 0.7s; }
-
-		@keyframes blink {
-			0%, 50% {
-				opacity: 1;
-			}
-			51%, 100% {
-				opacity: 0;
-			}
-		}
-
 		.typewriter-container {
 			display: inline-block;
-			margin-left: 0.5rem;
+			margin-left: 0.25rem;
+		}
+
+		@media (min-width: 640px) {
+			.typewriter-container {
+				margin-left: 0.5rem;
+			}
 		}
 
 		.typewriter-text {
@@ -315,59 +302,117 @@ import Layout from '../layouts/Layout.astro';
 		.typewriter-cursor {
 			display: inline-block;
 			animation: blink 1s infinite;
-			margin-left: 2px;
+			margin-left: 1px;
+		}
+
+		@media (min-width: 640px) {
+			.typewriter-cursor {
+				margin-left: 2px;
+			}
 		}
 
 		.animation-delay-2000 {
 			animation-delay: 2s;
 			animation-fill-mode: both;
 		}
+
+		.animation-delay-0s { animation-delay: 0s; }
+		.animation-delay-0-5s { animation-delay: 0.5s; }
+		.animation-delay-1s { animation-delay: 1s; }
+		.animation-delay-1-5s { animation-delay: 1.5s; }
+		.animation-delay-2s { animation-delay: 2s; }
+
+		.stagger-item:nth-child(1).animate { transition-delay: 0.1s; }
+		.stagger-item:nth-child(2).animate { transition-delay: 0.2s; }
+		.stagger-item:nth-child(3).animate { transition-delay: 0.3s; }
+		.stagger-item:nth-child(4).animate { transition-delay: 0.4s; }
+		.stagger-item:nth-child(5).animate { transition-delay: 0.5s; }
+		.stagger-item:nth-child(6).animate { transition-delay: 0.6s; }
+		.stagger-item:nth-child(7).animate { transition-delay: 0.7s; }
+
+		@media (hover: none) {
+			.hover\:scale-110:hover,
+			.hover\:scale-125:hover,
+			.hover\:rotate-3:hover,
+			.hover\:-rotate-3:hover,
+			.hover\:rotate-2:hover,
+			.hover\:-rotate-2:hover,
+			.hover\:rotate-1:hover {
+				transform: none;
+			}
+		}
 	</style>
 
 	<script>
-		const observerOptions = {
-			threshold: 0.15,
-			rootMargin: '0px 0px -100px 0px'
-		};
+		function detectDevice() {
+			const isMobile = window.innerWidth <= 768;
+			const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
 
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('animate');
+			return { isMobile, isTablet };
+		}
 
-					const staggerItems = entry.target.querySelectorAll('.stagger-item');
-					staggerItems.forEach(item => {
-						item.classList.add('animate');
-					});
+		function initializeObserver() {
+			const { isMobile, isTablet } = detectDevice();
+
+			const observerOptions = {
+				threshold: isMobile ? 0.1 : isTablet ? 0.12 : 0.15,
+				rootMargin: isMobile ? '0px 0px -30px 0px' : isTablet ? '0px 0px -70px 0px' : '0px 0px -100px 0px'
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('animate');
+
+						const staggerItems = entry.target.querySelectorAll('.stagger-item');
+						staggerItems.forEach(item => {
+							item.classList.add('animate');
+						});
+					}
+				});
+			}, observerOptions);
+
+			document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right').forEach(el => {
+				observer.observe(el);
+			});
+		}
+
+		function initializeParallax() {
+			window.addEventListener('scroll', () => {
+				const { isMobile, isTablet } = detectDevice();
+				const windowHeight = window.innerHeight;
+				const hero = document.getElementById('hero');
+
+				if (hero) {
+					const heroRect = hero.getBoundingClientRect();
+					const heroTop = heroRect.top;
+					const heroHeight = heroRect.height;
+
+					if (heroTop < windowHeight && heroTop > -heroHeight) {
+						const progress = (windowHeight - heroTop) / (windowHeight + heroHeight);
+						let parallaxOffset;
+
+						if (isMobile) {
+							parallaxOffset = progress * 30;
+						} else if (isTablet) {
+							parallaxOffset = progress * 60;
+						} else {
+							parallaxOffset = progress * 100;
+						}
+
+						hero.style.transform = `translateY(${parallaxOffset}px)`;
+					}
 				}
 			});
-		}, observerOptions);
-
-		document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right').forEach(el => {
-			observer.observe(el);
-		});
-
-		window.addEventListener('scroll', () => {
-			const windowHeight = window.innerHeight;
-			const hero = document.getElementById('hero');
-
-			if (hero) {
-				const heroRect = hero.getBoundingClientRect();
-				const heroTop = heroRect.top;
-				const heroHeight = heroRect.height;
-
-				if (heroTop < windowHeight && heroTop > -heroHeight) {
-					const progress = (windowHeight - heroTop) / (windowHeight + heroHeight);
-					const parallaxOffset = progress * 100;
-					hero.style.transform = `translateY(${parallaxOffset}px)`;
-				}
-			}
-		});
+		}
 
 		function typeWriter() {
 			const text = " Camber Robotics";
 			const element = document.getElementById('typewriter-text');
 			const cursor = document.querySelector('.typewriter-cursor');
+
+			if (!element || !cursor) return;
+
 			let i = 0;
 
 			function type() {
@@ -385,6 +430,20 @@ import Layout from '../layouts/Layout.astro';
 			setTimeout(type, 800);
 		}
 
-		document.addEventListener('DOMContentLoaded', typeWriter);
+		function handleResize() {
+			initializeObserver();
+		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			initializeObserver();
+			initializeParallax();
+			typeWriter();
+		});
+
+		let resizeTimeout;
+		window.addEventListener('resize', () => {
+			clearTimeout(resizeTimeout);
+			resizeTimeout = setTimeout(handleResize, 250);
+		});
 	</script>
 </Layout>
