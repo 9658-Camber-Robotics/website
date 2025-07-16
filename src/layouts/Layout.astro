@@ -2,39 +2,66 @@
 import "../styles/global.css";
 
 export interface Props {
-	title?: string;
-	description?: string;
+    title?: string;
+    description?: string;
+    image?: string;
+    url?: string;
 }
 
-const { title = "Camber Robotics", description = "A modern web framework" } = Astro.props;
+const {
+    title = "Camber Robotics",
+    description = "A modern web framework",
+    image = "/community.avif",
+    url = "https://camberrobotics.com"
+} = Astro.props;
 const year = new Date().getFullYear();
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="generator" content={Astro.generator} />
-        <meta name="description" content={description} />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <title>{title}</title>
-    </head>
-    <body>
-        <main>
-            <slot />
-        </main>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="FRC robotics, FIRST Robotics Competition, Team 9658, Camber Robotics, Keystone School, San Antonio robotics, STEM education, robotics team, swerve drivetrain, MK4i, robotics competition, engineering students, robotics outreach, robotics community, Texas robotics, high school robotics, robotics innovation, collaborative robotics, diverse STEM team" />
 
-        <footer class="bg-black text-white py-8 px-6 text-center">
-            <div class="flex flex-col items-center gap-4">
-                <a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
-                    <img src="/Instagram.svg" alt="Instagram" class="w-6 h-6" />
-                </a>
-                <p class="text-gray-300">&copy; {year} Camber Robotics</p>
-            </div>
-        </footer>
-    </body>
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url).href} />
+    <meta property="og:image:alt" content="Camber Robotics team image" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Camber Robotics" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url).href} />
+    <meta property="twitter:image:alt" content="Camber Robotics team image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>{title}</title>
+</head>
+<body>
+<main>
+    <slot />
+</main>
+
+<footer class="bg-black text-white py-8 px-6 text-center">
+    <div class="flex flex-col items-center gap-4">
+        <a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
+            <img src="/Instagram.svg" alt="Instagram" class="w-6 h-6" />
+        </a>
+        <p class="text-gray-300">&copy; {year} Camber Robotics</p>
+    </div>
+</footer>
+</body>
 </html>
