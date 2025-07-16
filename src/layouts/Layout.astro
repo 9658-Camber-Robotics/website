@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = "Camber Robotics", description = "A modern web framework" } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <title>{title}</title>
+    </head>
+    <body>
+        <main>
+            <slot />
+        </main>
+
+        <footer class="bg-black text-white py-8 px-6 text-center">
+            <p class="text-gray-300">&copy; {year} Camber Robotics</p>
+        </footer>
+    </body>
+</html>
