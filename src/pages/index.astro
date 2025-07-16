@@ -6,10 +6,14 @@ import Layout from '../layouts/Layout.astro';
 	<!-- Hero Section -->
 	<section id="hero" class="bg-black text-white py-32 px-6 overflow-hidden min-h-screen flex items-center">
 		<div class="max-w-6xl mx-auto text-center">
-			<h1 class="text-5xl md:text-7xl font-bold mb-6 underline decoration-4 underline-offset-8 animate-fade-in-up">
-				9658: Camber Robotics
+			<h1 class="text-5xl md:text-7xl font-bold mb-6 decoration-4 underline-offset-8">
+				<span class="inline-block">9658:</span>
+				<span class="typewriter-container">
+    <span id="typewriter-text" class="typewriter-text"></span>
+    <span class="typewriter-cursor">|</span>
+   </span>
 			</h1>
-			<p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-300">
+			<p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-2000">
 				We aim to create a robotics culture that values collaboration as much as innovation.
 			</p>
 		</div>
@@ -284,6 +288,35 @@ import Layout from '../layouts/Layout.astro';
 		.stagger-item:nth-child(5).animate { transition-delay: 0.5s; }
 		.stagger-item:nth-child(6).animate { transition-delay: 0.6s; }
 		.stagger-item:nth-child(7).animate { transition-delay: 0.7s; }
+
+		@keyframes blink {
+			0%, 50% {
+				opacity: 1;
+			}
+			51%, 100% {
+				opacity: 0;
+			}
+		}
+
+		.typewriter-container {
+			display: inline-block;
+			margin-left: 0.5rem;
+		}
+
+		.typewriter-text {
+			display: inline-block;
+		}
+
+		.typewriter-cursor {
+			display: inline-block;
+			animation: blink 1s infinite;
+			margin-left: 2px;
+		}
+
+		.animation-delay-2000 {
+			animation-delay: 2s;
+			animation-fill-mode: both;
+		}
 	</style>
 
 	<script>
@@ -325,5 +358,28 @@ import Layout from '../layouts/Layout.astro';
 				}
 			}
 		});
+
+		function typeWriter() {
+			const text = " Camber Robotics";
+			const element = document.getElementById('typewriter-text');
+			const cursor = document.querySelector('.typewriter-cursor');
+			let i = 0;
+
+			function type() {
+				if (i < text.length) {
+					element.textContent += text.charAt(i);
+					i++;
+					setTimeout(type, 100);
+				} else {
+					setTimeout(() => {
+						cursor.style.display = 'none';
+					}, 1000);
+				}
+			}
+
+			setTimeout(type, 800);
+		}
+
+		document.addEventListener('DOMContentLoaded', typeWriter);
 	</script>
 </Layout>
