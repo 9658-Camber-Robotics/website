@@ -1,6 +1,16 @@
 ---
+import { Image, Picture } from "astro:assets";
+import artpaceImg from "../assets/Artpace.svg";
+import communityImg from "../assets/community.avif";
+import frcImg from "../assets/FRC.png";
+import keystoneImg from "../assets/Keystone.png";
+import lowesImg from "../assets/Lowes.svg";
+import ourStoryImg from "../assets/our_story.avif";
+import outreachImg from "../assets/outreach_and_service.avif";
+import homeDepotImg from "../assets/TheHomeDepot.svg";
 import Layout from "../layouts/Layout.astro";
 ---
+
 
 <Layout
 	title="Camber Robotics - Team 9658"
@@ -27,7 +37,7 @@ import Layout from "../layouts/Layout.astro";
 			<div class="scroll-prompt-content">
 				<span class="scroll-text">Scroll for more</span>
 				<div class="scroll-arrow">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 						<path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</div>
@@ -49,12 +59,29 @@ import Layout from "../layouts/Layout.astro";
 
 	<!-- Community Section -->
 	<section id="community" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white relative">
-		<img src="/community.avif" alt="" class="hidden lg:block absolute right-10 top-1/3 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl" />
+		<Picture
+			src={communityImg}
+			alt=""
+			widths={[240,384,540]}
+			formats={['avif','webp','jpeg']}
+			width={384}
+			height={384}
+			class="hidden lg:block absolute right-10 top-1/3 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl"
+		/>
 		<div class="max-w-5xl mx-auto scroll-animate relative z-10">
 			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Our Community</h3>
 			<div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
 				<div class="scroll-animate-left lg:pl-12">
-					<img src="/community.avif" alt="Community" class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6" />
+					<Picture
+						src={communityImg}
+						alt="Community"
+						widths={[300,480,768]}
+						formats={['avif','webp','jpeg']}
+						sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+						width={600}
+						height={384}
+						class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6"
+					/>
 					<p class="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed mb-4 sm:mb-6">
 						<span class="text-white font-semibold">Camber = Diverse.</span> We strive to build an inclusive team that encourages collaboration. Our members come from Hispanic, LGBTQ+, and other backgrounds underrepresented in STEM.
 					</p>
@@ -79,10 +106,27 @@ import Layout from "../layouts/Layout.astro";
 
 	<!-- Story Section -->
 	<section id="story" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white relative">
-		<img src="/our_story.avif" alt="" class="hidden lg:block absolute left-10 top-1/10 transform -translate-y-1/2 w-96 h-64 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl animation-delay-1s" />
+		<Picture
+			src={ourStoryImg}
+			alt=""
+			widths={[192,384,540]}
+			formats={['avif','webp','jpeg']}
+			width={384}
+			height={256}
+			class="hidden lg:block absolute left-10 top-1/10 transform -translate-y-1/2 w-96 h-64 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl animation-delay-1s"
+		/>
 		<div class="max-w-4xl mx-auto scroll-animate relative z-10">
 			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Our Story</h3>
-			<img src="/our_story.avif" alt="Our Story" class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6 sm:mb-8" />
+			<Picture
+				src={ourStoryImg}
+				alt="Our Story"
+				widths={[300,480,768]}
+				formats={['avif','webp','jpeg']}
+				sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+				width={600}
+				height={384}
+				class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6 sm:mb-8"
+			/>
 			<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200">
 				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. Last year, our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom. Still, we managed to custom-design, build, and program a robot by the 2024 San Antonio competition and achieved <span class="font-semibold text-white highlight-text">highest-placed rookie team</span>. This year, under the guidance of a more experienced mentor, the BroncBotz (3481), our team managed to win the <span class="font-semibold text-white highlight-text">Judge's Choice Award</span> at the Houston competition and went on to win the <span class="font-semibold text-white highlight-text">Rising All-Star award</span> at state.
 			</p>
@@ -91,12 +135,29 @@ import Layout from "../layouts/Layout.astro";
 
 	<!-- Outreach Section -->
 	<section id="outreach" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black relative">
-		<img src="/outreach_and_service.avif" alt="" class="hidden lg:block absolute right-20 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl animation-delay-2s" />
+		<Picture
+			src={outreachImg}
+			alt=""
+			formats={['avif','webp','jpeg']}
+			widths={[240,384,540]}
+			width={384}
+			height={384}
+			class="hidden lg:block absolute right-20 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl animation-delay-2s"
+		/>
 		<div class="max-w-4xl mx-auto scroll-animate relative z-20">
 			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-12 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
 				Our Outreach & Service
 			</h3>
-			<img src="/outreach_and_service.avif" alt="Outreach and Service" class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6 sm:mb-8" />
+			<Picture
+				src={outreachImg}
+				alt="Outreach and Service"
+				formats={['avif','webp','jpeg']}
+				widths={[300,480,768]}
+				sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+				width={600}
+				height={384}
+				class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6 sm:mb-8"
+			/>
 			<div class="grid md:grid-cols-2 gap-6 sm:gap-8">
 				<div class="scroll-animate-left">
 					<h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 text-white underline decoration-2 underline-offset-4">Fundraising</h4>
@@ -120,13 +181,43 @@ import Layout from "../layouts/Layout.astro";
 			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-white underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Partners</h3>
 			<div class="flex flex-col items-center gap-8 sm:gap-12">
 				<div class="flex justify-center items-center gap-4 sm:gap-8 lg:gap-16 flex-wrap">
-					<img src="/Keystone.png" alt="Keystone School" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-0s" />
-					<img src="/Artpace.svg" alt="Artpace" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-1s" />
-					<img src="/FRC.png" alt="FIRST Robotics Competition" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-2s" />
+					<Image
+						src={keystoneImg}
+						alt="Keystone School"
+						width={320}
+						height={128}
+						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-0s"
+					/>
+					<Image
+						src={artpaceImg}
+						alt="Artpace"
+						width={320}
+						height={128}
+						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-1s"
+					/>
+					<Image
+						src={frcImg}
+						alt="FIRST Robotics Competition"
+						width={320}
+						height={128}
+						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-2s"
+					/>
 				</div>
 				<div class="flex justify-center items-center gap-4 sm:gap-8 lg:gap-16 flex-wrap">
-					<img src="/TheHomeDepot.svg" alt="The Home Depot" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-0-5s" />
-					<img src="/Lowes.svg" alt="Lowe's" class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-1 transition-all duration-500 ease-in-out float-animation animation-delay-1-5s" />
+					<Image
+						src={homeDepotImg}
+						alt="The Home Depot"
+						width={320}
+						height={128}
+						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-0-5s"
+					/>
+					<Image
+						src={lowesImg}
+						alt="Lowe's"
+						width={320}
+						height={128}
+						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-1 transition-all duration-500 ease-in-out float-animation animation-delay-1-5s"
+					/>
 				</div>
 			</div>
 		</div>

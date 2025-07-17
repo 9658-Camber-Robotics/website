@@ -2,17 +2,17 @@
 import "../styles/global.css";
 
 export interface Props {
-    title?: string;
-    description?: string;
-    image?: string;
-    url?: string;
+	title?: string;
+	description?: string;
+	image?: string;
+	url?: string;
 }
 
 const {
-    title = "Camber Robotics",
-    description = "A modern web framework",
-    image = "/community.avif",
-    url = "https://camberrobotics.com"
+	title = "Camber Robotics",
+	description = "A modern web framework",
+	image = "/community.avif",
+	url = "https://camberrobotics.com",
 } = Astro.props;
 const year = new Date().getFullYear();
 ---
@@ -59,10 +59,10 @@ const year = new Date().getFullYear();
     <div class="flex flex-col items-center gap-4">
         <div class="flex gap-4">
             <a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
-                <img src="/Instagram.svg" alt="Instagram" class="w-6 h-6" />
+                <img src="/src/assets/Instagram.svg" alt="Instagram" class="w-6 h-6" />
             </a>
             <a href="https://github.com/9658-Camber-Robotics/camber-website" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
-                <img src="/github.svg" alt="GitHub" class="w-6 h-6" />
+                <img src="/src/assets/github.svg" alt="GitHub" class="w-6 h-6" />
             </a>
         </div>
         <p class="text-gray-300">&copy; {year} Camber Robotics</p>
