@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import githubIcon from "../assets/github.svg";
+import instagramIcon from "../assets/Instagram.svg";
 
 export interface Props {
 	title?: string;
@@ -59,10 +61,10 @@ const year = new Date().getFullYear();
     <div class="flex flex-col items-center gap-4">
         <div class="flex gap-4">
             <a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
-                <img src="/src/assets/Instagram.svg" alt="Instagram" class="w-6 h-6" />
+                <img src={instagramIcon.src} alt="Instagram" class="w-6 h-6" />
             </a>
             <a href="https://github.com/9658-Camber-Robotics/camber-website" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
-                <img src="/src/assets/github.svg" alt="GitHub" class="w-6 h-6" />
+                <img src={githubIcon.src} alt="GitHub" class="w-6 h-6" />
             </a>
         </div>
         <p class="text-gray-300">&copy; {year} Camber Robotics</p>
