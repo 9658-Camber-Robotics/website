@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import githubIcon from "../assets/github.svg";
 import instagramIcon from "../assets/Instagram.svg";
 
@@ -29,7 +30,9 @@ const year = new Date().getFullYear();
     <meta name="description" content={description} />
     <meta name="keywords" content="FRC robotics, FIRST Robotics Competition, Team 9658, Camber Robotics, Keystone School, San Antonio robotics, STEM education, robotics team, swerve drivetrain, MK4i, robotics competition, engineering students, robotics outreach, robotics community, Texas robotics, high school robotics, robotics innovation, collaborative robotics, diverse STEM team" />
 
+    <!-- Vercel -->
     <Analytics />
+    <SpeedInsights />
 
     <!-- OpenGraph / Facebook -->
     <meta property="og:type" content="website" />
