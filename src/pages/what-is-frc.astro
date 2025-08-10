@@ -1,0 +1,167 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+        title="What is FRC? - Camber Robotics"
+        description="Learn about FIRST Robotics Competition (FRC), the ultimate high school robotics challenge that combines STEM education with real-world engineering experience."
+        image="/FRC.png"
+        url="https://camberrobotics.com/what-is-frc"
+>
+    <!-- Hero Section -->
+    <section id="hero" class="bg-black text-white py-16 sm:py-24 lg:py-32 px-4 sm:px-6 min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto">
+                <div class="text-center">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
+                        What is <span class="underline">FRC</span>?
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed mb-8">
+                        FIRST Robotics Competition is the ultimate high school STEM challenge, combining engineering, programming, and teamwork.
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <!-- What is FRC Section -->
+    <section id="what-is-frc" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-center">
+        <div class="max-w-4xl mx-auto scroll-animate">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-12 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
+                The Competition
+            </h2>
+            <div class="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed space-y-6">
+                <p>
+                    <span class="text-white font-semibold">FIRST Robotics Competition (FRC)</span> is an international high school robotics competition founded by Dean Kamen in 1989. Every year, teams of high school students, along with adult mentors, have six weeks to build and program a robot that can compete in a challenging field game.
+                </p>
+                <p>
+                    The competition combines the excitement of sports with the rigors of science and technology. Teams must design, build, and program robots to compete in alliance-based matches where strategy, teamwork, and gracious professionalism are just as important as technical skills.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-frc" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-center">
+        <div class="mt-12">
+            <a
+                    href="/"
+                    class="inline-block text-xl font-semibold text-white hover:text-gray-200 transition-all duration-500 ease-in-out glow-text hover:glow-intense"
+            >
+                ← Back to Home
+            </a>
+        </div>
+    </section>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        #hero {
+            position: relative;
+            top: 0;
+            margin-top: -25px;
+            padding-top: calc(1rem + 25px);
+        }
+
+        @media (min-width: 640px) {
+            #hero {
+                margin-top: -50px;
+                padding-top: calc(1.5rem + 50px);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #hero {
+                padding-top: calc(2rem + 50px);
+            }
+        }
+
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-animate-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 1s ease-out;
+        }
+
+        .scroll-animate-left.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scroll-animate-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 1s ease-out;
+        }
+
+        .scroll-animate-right.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .highlight-text {
+            animation: highlightGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes highlightGlow {
+            0%, 100% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        .glow-text {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+            transition: text-shadow 0.3s ease-in-out;
+        }
+
+        .glow-text:hover,
+        .hover\:glow-intense:hover {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+        }
+
+        @media (hover: none) {
+            .hover\:glow-intense:hover {
+                text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+            }
+        }
+    </style>
+
+    <script>
+        function initializeObserver() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeObserver();
+        });
+    </script>
+</Layout>

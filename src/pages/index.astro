@@ -128,7 +128,7 @@ import Layout from "../layouts/Layout.astro";
 				class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6 sm:mb-8"
 			/>
 			<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200">
-				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. Last year, our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom. Still, we managed to custom-design, build, and program a robot by the 2024 San Antonio competition and achieved <span class="font-semibold text-white highlight-text">highest-placed rookie team</span>. This year, under the guidance of a more experienced mentor, the BroncBotz (3481), our team managed to win the <span class="font-semibold text-white highlight-text">Judge's Choice Award</span> at the Houston competition and went on to win the <span class="font-semibold text-white highlight-text">Rising All-Star award</span> at state.
+				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. In our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom. Still, we managed to custom-design, build, and program a robot by the 2024 San Antonio competition and achieved <span class="font-semibold text-white highlight-text">highest-placed rookie team</span>. In the 2025 season our team managed to win the <span class="font-semibold text-white highlight-text">Judge's Choice Award</span> at the Houston competition and went on to win the <span class="font-semibold text-white highlight-text">Rising All-Star award</span> at state.
 			</p>
 		</div>
 	</section>
@@ -179,60 +179,65 @@ import Layout from "../layouts/Layout.astro";
 	<section id="partners" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black">
 		<div class="max-w-6xl mx-auto scroll-animate">
 			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-white underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Partners</h3>
-			<div class="flex flex-col items-center gap-8 sm:gap-12">
-				<div class="flex justify-center items-center gap-4 sm:gap-8 lg:gap-16 flex-wrap">
-					<Image
-						src={keystoneImg}
-						alt="Keystone School"
-						width={320}
-						height={128}
-						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-0s"
-					/>
-					<Image
-						src={artpaceImg}
-						alt="Artpace"
-						width={320}
-						height={128}
-						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-1s"
-					/>
-					<Image
-						src={frcImg}
-						alt="FIRST Robotics Competition"
-						width={320}
-						height={128}
-						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-2s"
-					/>
-				</div>
-				<div class="flex justify-center items-center gap-4 sm:gap-8 lg:gap-16 flex-wrap">
-					<Image
-						src={homeDepotImg}
-						alt="The Home Depot"
-						width={320}
-						height={128}
-						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-0-5s"
-					/>
-					<Image
-						src={lowesImg}
-						alt="Lowe's"
-						width={320}
-						height={128}
-						class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-1 transition-all duration-500 ease-in-out float-animation animation-delay-1-5s"
-					/>
-				</div>
+			<div class="flex justify-center items-center gap-4 sm:gap-8 lg:gap-16 flex-wrap">
+				<Image
+					src={keystoneImg}
+					alt="Keystone School"
+					width={320}
+					height={128}
+					class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-0s"
+				/>
+				<Image
+					src={artpaceImg}
+					alt="Artpace"
+					width={320}
+					height={128}
+					class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-1s"
+				/>
+				<Image
+					src={frcImg}
+					alt="FIRST Robotics Competition"
+					width={320}
+					height={128}
+					class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-2s"
+				/>
+				<Image
+					src={homeDepotImg}
+					alt="The Home Depot"
+					width={320}
+					height={128}
+					class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-0-5s"
+				/>
 			</div>
 		</div>
 	</section>
 
-	<!-- Battery Management Tool Section -->
-	<section id="tool" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white">
-		<div class="max-w-4xl mx-auto text-center scroll-animate">
-			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Our Innovation</h3>
-			<p class="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-200 mb-6">
-				Camber's lead programmer developed a <span class="font-semibold text-white highlight-text">Battery Management System</span> to help FRC teams track and maintain their robot batteries effectively.
-			</p>
-			<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200 mb-8">
-				See what it's like at <a href="https://batteries.camberrobotics.com" class="font-semibold text-white highlight-text hover:underline" target="_blank" rel="noopener noreferrer">batteries.camberrobotics.com</a>.
-			</p>
+	<!-- More About Us Section -->
+	<section id="more-about" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black">
+		<div class="max-w-4xl mx-auto scroll-animate text-center">
+			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-8 sm:mb-12 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
+				More About Us
+			</h3>
+			<div class="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 lg:gap-16">
+				<a
+					href="/what-is-frc"
+					class="text-xl sm:text-xl lg:text-2xl font-semibold text-white hover:text-gray-200 transition-all duration-500 ease-in-out float-animation animation-delay-0s glow-text hover:glow-intense"
+				>
+					What is FRC?
+				</a>
+				<a
+					href="/our-innovation"
+					class="text-xl sm:text-xl lg:text-2xl font-semibold text-white hover:text-gray-200 transition-all duration-500 ease-in-out float-animation animation-delay-1s glow-text hover:glow-intense"
+				>
+					Our Innovation
+				</a>
+				<a
+					href="/contact"
+					class="text-xl sm:text-xl lg:text-2xl font-semibold text-white hover:text-gray-200 transition-all duration-500 ease-in-out float-animation animation-delay-2s glow-text hover:glow-intense"
+				>
+					Get In Touch
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -500,6 +505,22 @@ import Layout from "../layouts/Layout.astro";
 
 			.scroll-text {
 				font-size: 0.8rem;
+			}
+		}
+
+		.glow-text {
+			text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+			transition: text-shadow 0.3s ease-in-out;
+		}
+
+		.glow-text:hover,
+		.hover\:glow-intense:hover {
+			text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+		}
+
+		@media (hover: none) {
+			.hover\:glow-intense:hover {
+				text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 			}
 		}
 	</style>

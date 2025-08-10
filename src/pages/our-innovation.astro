@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+        title="Our Innovation - Camber Robotics"
+        description="Learn about Camber Robotics' Battery Management System - a tool developed to help FRC teams track and maintain their robot batteries effectively."
+        image="/community.avif"
+        url="https://camberrobotics.com/our-innovation"
+>
+    <!-- Our Innovation Section -->
+    <section id="innovation" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white min-h-screen flex items-center">
+        <div class="max-w-4xl mx-auto text-center scroll-animate">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Our Innovation</h1>
+            <p class="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-200 mb-6">
+                Camber's lead programmer developed a <span class="font-semibold text-white highlight-text">Battery Management System</span> to help FRC teams track and maintain their robot batteries effectively.
+            </p>
+            <p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200 mb-8">
+                See what it's like at <a href="https://batteries.camberrobotics.com" class="font-semibold text-white highlight-text hover:underline" target="_blank" rel="noopener noreferrer">batteries.camberrobotics.com</a>.
+            </p>
+        </div>
+    </section>
+
+    <section id="why-frc" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-center">
+        <div class="mt-12">
+            <a
+                    href="/"
+                    class="inline-block text-xl font-semibold text-white hover:text-gray-200 transition-all duration-500 ease-in-out glow-text hover:glow-intense"
+            >
+                ← Back to Home
+            </a>
+        </div>
+    </section>
+
+    <style>
+        @keyframes highlightGlow {
+            0%, 100% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .highlight-text {
+            animation: highlightGlow 2s ease-in-out infinite;
+        }
+    </style>
+
+    <script>
+        function initializeObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeObserver();
+        });
+    </script>
+</Layout>

@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+        title="Contact - Camber Robotics Team 9658"
+        description="Get in touch with Camber Robotics. Contact our FRC Team 9658 from Keystone School in San Antonio, Texas."
+        image="/community.avif"
+        url="https://camberrobotics.com/contact"
+>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white min-h-screen flex items-center">
+        <div class="max-w-4xl mx-auto text-center scroll-animate">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Get In Touch</h1>
+            <p class="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-200 mb-6">
+                Have questions about our team or want to get involved? We'd love to hear from you.
+            </p>
+            <a href="mailto:contact@camberrobotics.com" class="text-lg sm:text-xl font-semibold text-white hover:text-gray-200 hover:underline">
+                contact@camberrobotics.com
+            </a>
+        </div>
+    </section>
+
+    <section id="why-frc" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-center">
+        <div class="mt-12">
+            <a
+                    href="/"
+                    class="inline-block text-xl font-semibold text-white hover:text-gray-200 transition-all duration-500 ease-in-out glow-text hover:glow-intense"
+            >
+                ← Back to Home
+            </a>
+        </div>
+    </section>
+
+    <style>
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .scroll-animate.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script>
+        function initializeObserver() {
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeObserver();
+        });
+    </script>
+</Layout>
