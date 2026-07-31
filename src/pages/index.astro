@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
 import camberLogo from "../assets/camber-logo.png";
+import keystoneImg from "../assets/Keystone.png";
 import yassImg from "../assets/YASS.png";
 import teamCommunityImg from "../assets/team-community.jpg";
 import teamHeroImg from "../assets/team-hero.jpg";
@@ -61,8 +62,23 @@ const awards = [
 		</div>
 	</section>
 
-	<!-- Mission Section -->
+	<!-- What is FRC Section -->
 	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
+		<div class="max-w-3xl mx-auto text-center scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4 sm:mb-6">
+				What is FRC?
+			</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+				<span class="font-semibold text-neutral-900 dark:text-white">FIRST Robotics Competition (FRC)</span> is an international high school robotics competition founded by Dean Kamen in 1989. Every year, teams of high school students, along with adult mentors, have six weeks to build and program a robot that can compete in a challenging field game.
+			</p>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+				The competition combines the excitement of sports with the rigors of science and technology. Teams must design, build, and program robots to compete in alliance-based matches where strategy, teamwork, and gracious professionalism are just as important as technical skills.
+			</p>
+		</div>
+	</section>
+
+	<!-- Mission Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white dark:bg-neutral-950">
 		<div class="max-w-3xl mx-auto text-center scroll-animate">
 			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4 sm:mb-6">
 				Our Mission
@@ -74,7 +90,7 @@ const awards = [
 	</section>
 
 	<!-- Community Section -->
-	<section id="community" class="py-16 sm:py-20 px-4 sm:px-6 bg-white dark:bg-neutral-950">
+	<section id="community" class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
 		<div class="max-w-5xl mx-auto scroll-animate">
 			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900 dark:text-white">Our Community</h2>
 			<div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
@@ -116,6 +132,19 @@ const awards = [
 		</div>
 	</section>
 
+	<!-- Keystone School Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white dark:bg-neutral-950">
+		<div class="max-w-3xl mx-auto text-center scroll-animate">
+			<a href="https://www.keystoneschool.org" target="_blank" rel="noopener noreferrer" class="inline-block mb-4">
+				<img src={keystoneImg.src} alt="Keystone School" class="h-14 sm:h-16 mx-auto object-contain invert dark:invert-0" />
+			</a>
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4">Proudly Hosted by Keystone School</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+				Camber Robotics is proudly hosted at and run by Keystone School, a small school on the south side of San Antonio, Texas. Keystone gives us the space to build, matches our fundraising dollar for dollar, and has backed us since our very first season working out of the corner of a middle-school classroom. We wouldn't exist without them.
+			</p>
+		</div>
+	</section>
+
 	<!-- Awards Section -->
 	<section id="awards" class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
 		<div class="max-w-4xl mx-auto scroll-animate">
@@ -129,6 +158,9 @@ const awards = [
 					</div>
 				))}
 			</div>
+			<p class="text-center mt-8">
+				<a href="https://www.thebluealliance.com/team/9658" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">See our full record on The Blue Alliance &rarr;</a>
+			</p>
 		</div>
 	</section>
 
