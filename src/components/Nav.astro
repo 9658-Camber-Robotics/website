@@ -19,10 +19,10 @@ const currentPath = new URL(Astro.request.url).pathname;
 	<nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
 		<a href="/" class="flex items-center gap-2 text-lg sm:text-xl font-bold text-neutral-900 dark:text-white shrink-0">
 			<img src={camberLogo.src} alt="Camber Robotics logo" class="w-8 h-8 sm:w-9 sm:h-9 dark:invert" />
-			Camber Robotics <span class="text-blue-600 dark:text-blue-400">9658</span>
+			<span>Camber Robotics <span class="text-blue-600 dark:text-blue-400">9658</span></span>
 		</a>
 
-		<div class="hidden lg:flex items-center gap-6 text-sm sm:text-base">
+		<div class="hidden xl:flex items-center gap-6 text-sm sm:text-base">
 			{links.map((link) => (
 				<a
 					href={link.href}
@@ -44,7 +44,7 @@ const currentPath = new URL(Astro.request.url).pathname;
 			<ThemeToggle />
 		</div>
 
-		<div class="flex lg:hidden items-center gap-1">
+		<div class="flex xl:hidden items-center gap-1">
 			<ThemeToggle />
 			<button
 				id="mobile-menu-toggle"
@@ -64,7 +64,7 @@ const currentPath = new URL(Astro.request.url).pathname;
 		</div>
 	</nav>
 
-	<div id="mobile-menu" class="hidden lg:hidden border-t border-neutral-200 dark:border-neutral-700 px-4 sm:px-6 py-4">
+	<div id="mobile-menu" class="hidden xl:hidden border-t border-neutral-200 dark:border-neutral-700 px-4 sm:px-6 py-4">
 		<div class="flex flex-col gap-4 text-base">
 			{links.map((link) => (
 				<a
