@@ -9,7 +9,6 @@ import { sponsors } from "../data/sponsors.js";
 import Layout from "../layouts/Layout.astro";
 
 const awards = [
-	{ year: "2025", title: "4th Place Overall", event: "FIT District Houston Event (out of 31 teams)" },
 	{ year: "2025", title: "Judges' Award", event: "FIT District Houston Event" },
 	{ year: "2025", title: "4th Alliance Captain", event: "FIT District Houston Event" },
 	{ year: "2025", title: "Rising All-Star Award", event: "Texas State Championship (out of 90 teams)" },
@@ -90,7 +89,7 @@ const awards = [
 						class="w-full h-48 sm:h-64 lg:h-80 object-cover rounded-lg shadow-sm mb-6"
 					/>
 					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-						Camber Robotics is about <span class="font-semibold text-neutral-900 dark:text-white">20 students</span> from Keystone School in San Antonio, Texas, meeting two to three times a week. We strive to build an inclusive team that encourages collaboration &mdash; our members come from Hispanic, LGBTQ+, and other backgrounds underrepresented in STEM.
+						Camber Robotics is about <span class="font-semibold text-neutral-900 dark:text-white">20 students</span> from Keystone School in San Antonio, Texas, meeting two to three times a week. We strive to build an inclusive team that encourages collaboration &mdash; our members come from Hispanic, LGBTQ+, and other backgrounds underrepresented in STEM. This year, our female and non-binary membership grew <span class="font-semibold text-neutral-900 dark:text-white">500%</span>, and we've had a woman as head coach every year since founding.
 					</p>
 					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
 						Our alumni go on to study at prestigious universities around the world, carrying the skills and mindset they built on Camber with them.
@@ -120,7 +119,7 @@ const awards = [
 	<section id="awards" class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
 		<div class="max-w-4xl mx-auto scroll-animate">
 			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900 dark:text-white">Our Awards</h2>
-			<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+			<div class="grid sm:grid-cols-3 gap-4 sm:gap-6">
 				{awards.map((award) => (
 					<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-5 text-center shadow-sm">
 						<p class="text-blue-600 dark:text-blue-400 font-bold text-sm mb-2">{award.year}</p>
@@ -147,7 +146,7 @@ const awards = [
 				class="w-full h-48 sm:h-64 object-cover rounded-lg shadow-sm mb-6 sm:mb-8"
 			/>
 			<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
-				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. In our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom &mdash; and we've kept growing since. In 2025, we started FTC Team #31617 at our middle school, extending robotics to our youngest students. During the 2024 season we raised nearly <span class="font-semibold text-neutral-900 dark:text-white">$10,000</span> through FRC-related organizations and local businesses, matched by Keystone, and we raised over <span class="font-semibold text-neutral-900 dark:text-white">$10,000</span> again during the 2026 season. Our leadership runs SA Smart, a nonprofit for water conservation, and our team includes NHS officers with <span class="font-semibold text-neutral-900 dark:text-white">4,000+ volunteer hours</span> combined.
+				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. In our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom &mdash; and we've kept growing since. In 2025, we started FTC Team #31617 at our middle school, extending robotics to our youngest students. During the 2024 season we raised nearly <span class="font-semibold text-neutral-900 dark:text-white">$10,000</span> through FRC-related organizations and local businesses, matched by Keystone, and we raised over <span class="font-semibold text-neutral-900 dark:text-white">$10,000</span> again during the 2026 season. Our leadership runs SA Smart, a nonprofit for water conservation, and nearly all our eligible members are in National Honor Society (including one officer), with <span class="font-semibold text-neutral-900 dark:text-white">4,000+ volunteer hours</span> combined.
 			</p>
 			<div class="mt-6 sm:mt-8">
 				<div class="relative w-full rounded-lg overflow-hidden shadow-sm" style="padding-top: 56.25%;">
@@ -190,13 +189,13 @@ const awards = [
 				<div>
 					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900 dark:text-white">Youth Programs</h3>
 					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
-						We host monthly robotics events at South Side public libraries for elementary students using kits like Dot and Dash and LEGO EV3, run a twice-monthly Coding Collaborative class for K&ndash;8 students, and bring robot demonstrations to local events like Youth Code Jam. We also run an annual robotics summer camp for middle schoolers.
+						We host monthly robotics events at Landa Library for elementary-aged kids using kits like Dot and Dash, LEGO EV3, and VEX, run a twice-monthly Coding Collaborative class for K&ndash;8 students, and bring robot demonstrations to local events like Youth Code Jam. We also run an annual robotics summer camp for middle schoolers.
 					</p>
 				</div>
 				<div>
 					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900 dark:text-white">Community Impact</h3>
 					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
-						Our leadership runs SA Smart, a nonprofit for water conservation. Our team includes NHS members with <span class="font-semibold text-neutral-900 dark:text-white">4,000+ volunteer hours</span> combined, and in 2025 we started and now mentor FTC Team #31617 at our middle school.
+						Our leadership runs SA Smart, a nonprofit for water conservation. Nearly all our eligible members are in National Honor Society (including one officer), with <span class="font-semibold text-neutral-900 dark:text-white">4,000+ volunteer hours</span> combined, and in 2025 we started and now mentor FTC Team #31617 at our middle school.
 					</p>
 				</div>
 			</div>
@@ -242,7 +241,7 @@ const awards = [
 			</a>
 			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4">Yet Another Software Suite</h2>
 			<p class="text-sm sm:text-base lg:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-				Yet Another Software Suite (YASS) supports Camber Robotics both as a financial sponsor and as a technology partner &mdash; we're one of its founding teams. YASS provides flexible libraries and code generators that raise the floor for FRC teams, especially those lacking resources or experience, by simplifying programming and improving hardware compatibility. This year, we teamed up to present together at the <span class="font-semibold text-neutral-900 dark:text-white">FIRST World Championship</span>.
+				Yet Another Software Suite (YASS) supports Camber Robotics both as a financial sponsor and as a technology partner &mdash; we're one of its founding teams. YASS includes tools like Yet Another Generic Swerve Library (YAGSL), plus new libraries and a mechanisms generator, all aiming to raise the floor for FRC teams by simplifying programming and improving hardware compatibility for those lacking resources or experience. This year, we teamed up to present together at the <span class="font-semibold text-neutral-900 dark:text-white">FIRST World Championship</span>.
 			</p>
 		</div>
 	</section>
