@@ -1,5 +1,6 @@
 ---
 import camberLogo from "../assets/camber-logo.png";
+import ThemeToggle from "./ThemeToggle.astro";
 
 const links = [
 	{ href: "/", label: "Home" },
@@ -15,12 +16,13 @@ const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <header class="bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-700 sticky top-0 z-50">
-	<nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-		<a href="/" class="flex items-center gap-2 text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">
+	<nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+		<a href="/" class="flex items-center gap-2 text-lg sm:text-xl font-bold text-neutral-900 dark:text-white shrink-0">
 			<img src={camberLogo.src} alt="Camber Robotics logo" class="w-8 h-8 sm:w-9 sm:h-9 dark:invert" />
 			Camber Robotics <span class="text-blue-600 dark:text-blue-400">9658</span>
 		</a>
-		<div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm sm:text-base">
+
+		<div class="hidden lg:flex items-center gap-6 text-sm sm:text-base">
 			{links.map((link) => (
 				<a
 					href={link.href}
@@ -39,32 +41,81 @@ const currentPath = new URL(Astro.request.url).pathname;
 			>
 				Join Us
 			</a>
+			<ThemeToggle />
+		</div>
+
+		<div class="flex lg:hidden items-center gap-1">
+			<ThemeToggle />
 			<button
-				id="theme-toggle"
+				id="mobile-menu-toggle"
 				type="button"
-				aria-label="Toggle dark mode"
-				class="p-1.5 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+				aria-label="Toggle menu"
+				aria-expanded="false"
+				aria-controls="mobile-menu"
+				class="p-2.5 rounded-md text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
 			>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 dark:hidden">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" id="menu-icon-open">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 				</svg>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 hidden dark:block">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden" id="menu-icon-close">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
 				</svg>
 			</button>
 		</div>
 	</nav>
+
+	<div id="mobile-menu" class="hidden lg:hidden border-t border-neutral-200 dark:border-neutral-700 px-4 sm:px-6 py-4">
+		<div class="flex flex-col gap-4 text-base">
+			{links.map((link) => (
+				<a
+					href={link.href}
+					class={`font-medium transition-colors ${
+						currentPath === link.href
+							? "text-blue-600 dark:text-blue-400"
+							: "text-neutral-700 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400"
+					}`}
+				>
+					{link.label}
+				</a>
+			))}
+			<a
+				href="mailto:contact@camberrobotics.com"
+				class="inline-block text-center rounded-md bg-blue-600 text-white font-semibold px-4 py-2 hover:bg-blue-700 transition-colors"
+			>
+				Join Us
+			</a>
+		</div>
+	</div>
 </header>
 
 <script>
 	function initThemeToggle() {
-		const toggle = document.getElementById("theme-toggle");
-		if (!toggle) return;
-		toggle.addEventListener("click", () => {
-			const isDark = document.documentElement.classList.toggle("dark");
-			localStorage.setItem("theme", isDark ? "dark" : "light");
+		const toggles = document.querySelectorAll(".theme-toggle-btn");
+		toggles.forEach((toggle) => {
+			toggle.addEventListener("click", () => {
+				const isDark = document.documentElement.classList.toggle("dark");
+				localStorage.setItem("theme", isDark ? "dark" : "light");
+			});
 		});
 	}
 
-	document.addEventListener("DOMContentLoaded", initThemeToggle);
+	function initMobileMenu() {
+		const menuToggle = document.getElementById("mobile-menu-toggle");
+		const menu = document.getElementById("mobile-menu");
+		const iconOpen = document.getElementById("menu-icon-open");
+		const iconClose = document.getElementById("menu-icon-close");
+		if (!menuToggle || !menu || !iconOpen || !iconClose) return;
+
+		menuToggle.addEventListener("click", () => {
+			const isOpen = menu.classList.toggle("hidden") === false;
+			menuToggle.setAttribute("aria-expanded", String(isOpen));
+			iconOpen.classList.toggle("hidden", isOpen);
+			iconClose.classList.toggle("hidden", !isOpen);
+		});
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		initThemeToggle();
+		initMobileMenu();
+	});
 </script>
