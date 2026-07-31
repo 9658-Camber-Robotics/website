@@ -22,6 +22,12 @@ const benefits = [
 ];
 
 const tiers = ["$5,000+", "$3,000", "$1,500", "$500"];
+
+const contactMailto = `mailto:camberrobotics@gmail.com?subject=${encodeURIComponent(
+	"Sponsorship Inquiry - Camber Robotics 9658",
+)}&body=${encodeURIComponent(
+	"Hi Camber Robotics team,\n\nI'm interested in learning more about sponsoring FRC Team 9658.\n\n",
+)}`;
 ---
 
 <Layout
@@ -147,10 +153,10 @@ const tiers = ["$5,000+", "$3,000", "$1,500", "$500"];
 				Whether it's sponsorship, mentorship, or a personal donation, we'd love to hear from you.
 			</p>
 			<a
-				href="mailto:camberrobotics@gmail.com"
+				href={contactMailto}
 				class="inline-block rounded-md bg-white text-blue-600 font-semibold px-8 py-3 hover:bg-blue-50 transition-colors"
 			>
-				Email camberrobotics@gmail.com
+				Contact Us
 			</a>
 		</div>
 	</section>
