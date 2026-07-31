@@ -1,0 +1,157 @@
+---
+import { sponsors } from "../data/sponsors.js";
+import Layout from "../layouts/Layout.astro";
+
+const benefits = [
+	{
+		title: "Logo on Our Shirts",
+		description: "Your logo featured on the team shirts worn by all ~30 of our students at every competition and public event.",
+	},
+	{
+		title: "Logo on Our Robot",
+		description: "Your logo featured directly on our competition robot, seen by judges, teams, and spectators at every match.",
+	},
+	{
+		title: "Event Appearances",
+		description: "We represent and thank our sponsors at events throughout our regional boundary, from competitions to community outreach.",
+	},
+	{
+		title: "Mentorship Welcome",
+		description: "Sponsorship doesn't have to be financial — we're just as excited to welcome hands-on mentors who want to share their engineering, business, or software expertise.",
+	},
+];
+
+const tiers = ["$5,000+", "$3,000", "$1,500", "$500"];
+---
+
+<Layout
+	title="Sponsors - Camber Robotics Team 9658"
+	description="Partner with FRC Team 9658 Camber Robotics through sponsorship, mentorship, or a tax-deductible individual donation."
+	image="/team-photo.jpg"
+	url="https://camberrobotics.com/sponsors"
+>
+	<!-- Hero Section -->
+	<section class="bg-white py-16 sm:py-20 px-4 sm:px-6">
+		<div class="max-w-3xl mx-auto text-center">
+			<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-neutral-900">
+				Partner With Camber Robotics
+			</h1>
+			<p class="text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed mb-8">
+				FRC Team 9658 is looking for sponsors and mentors to help us keep building, competing, and growing robotics in San Antonio.
+			</p>
+			<a
+				href="mailto:camberrobotics@gmail.com"
+				class="inline-block rounded-md bg-blue-600 text-white font-semibold px-8 py-3 hover:bg-blue-700 transition-colors"
+			>
+				Become a Sponsor
+			</a>
+		</div>
+	</section>
+
+	<!-- Why Sponsor Us Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+		<div class="max-w-5xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Why Sponsor Us</h2>
+			<div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
+				{benefits.map((benefit) => (
+					<div class="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm">
+						<h3 class="font-semibold text-lg text-neutral-900 mb-2">{benefit.title}</h3>
+						<p class="text-sm sm:text-base text-neutral-600 leading-relaxed">{benefit.description}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Sponsorship Levels Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+		<div class="max-w-4xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Sponsorship Levels</h2>
+			<div class="grid sm:grid-cols-4 gap-4 sm:gap-6">
+				{tiers.map((tier) => (
+					<div class="bg-neutral-50 border border-neutral-200 rounded-lg p-6 text-center shadow-sm">
+						<p class="text-xl sm:text-2xl font-bold text-blue-600">{tier}</p>
+					</div>
+				))}
+			</div>
+			<p class="text-center text-sm sm:text-base text-neutral-500 mt-6">
+				Contact us at <a href="mailto:camberrobotics@gmail.com" class="text-blue-600 hover:underline">camberrobotics@gmail.com</a> to discuss what's included at each level.
+			</p>
+		</div>
+	</section>
+
+	<!-- This Year's Impact Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+		<div class="max-w-3xl mx-auto text-center scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-6">Our Impact</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed mb-4">
+				Beyond competition, our roughly <span class="font-semibold text-neutral-900">30 students</span> put in real work in the community. This year, we ran a <span class="font-semibold text-neutral-900">Youth Code Jam</span>, presented at the <span class="font-semibold text-neutral-900">San Antonio Manufacturing Association</span>, and helped present alongside Yet Another Software Suite at the <span class="font-semibold text-neutral-900">FIRST World Championship</span>.
+			</p>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed mb-4">
+				We also volunteer at local FTC events and started our own FTC team at our middle school in 2026, extending robotics to younger students.
+			</p>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed">
+				Our team has raised over <span class="font-semibold text-neutral-900">$10,000</span> in each of the last two seasons, and our members have logged <span class="font-semibold text-neutral-900">4,000+ volunteer hours</span> combined &mdash; support that helps us keep showing up.
+			</p>
+		</div>
+	</section>
+
+	<!-- Individual Donations Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-blue-50">
+		<div class="max-w-2xl mx-auto text-center scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">Individual Donations Welcome</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-700 leading-relaxed mb-6">
+				A corporate sponsorship isn't the only way to help. Camber Robotics is a nonprofit, so individual donations of any size are tax-deductible and go directly toward competition fees, materials, and travel. Consult your tax advisor for details. We also welcome sponsorship and matching gifts through <span class="font-semibold text-neutral-900">Benevity</span> &mdash; if your employer partners with Benevity, email us and we'll help you get set up.
+			</p>
+			<a
+				href="mailto:camberrobotics@gmail.com"
+				class="inline-block rounded-md bg-blue-600 text-white font-semibold px-8 py-3 hover:bg-blue-700 transition-colors"
+			>
+				Email camberrobotics@gmail.com
+			</a>
+		</div>
+	</section>
+
+	<!-- Current Sponsors Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+		<div class="max-w-5xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Thank You to Our Sponsors</h2>
+			<div class="flex justify-center items-center gap-6 sm:gap-10 flex-wrap">
+				{sponsors.map((sponsor) => (
+					<a
+						href={sponsor.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 rounded-lg px-4 hover:border-blue-600 transition-colors"
+					>
+						{sponsor.logo ? (
+							<img
+								src={sponsor.logo.src}
+								alt={sponsor.name}
+								class={`max-h-14 sm:max-h-16 max-w-full object-contain ${sponsor.invert ? "invert" : ""}`}
+							/>
+						) : (
+							<span class="text-neutral-700 font-semibold text-center text-sm sm:text-base">{sponsor.name}</span>
+						)}
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 sm:py-24 px-4 sm:px-6 bg-blue-600">
+		<div class="max-w-2xl mx-auto text-center scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Partner With Us?</h2>
+			<p class="text-blue-100 mb-8">
+				Whether it's sponsorship, mentorship, or a personal donation, we'd love to hear from you.
+			</p>
+			<a
+				href="mailto:camberrobotics@gmail.com"
+				class="inline-block rounded-md bg-white text-blue-600 font-semibold px-8 py-3 hover:bg-blue-50 transition-colors"
+			>
+				Email camberrobotics@gmail.com
+			</a>
+		</div>
+	</section>
+</Layout>

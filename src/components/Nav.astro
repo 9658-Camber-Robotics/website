@@ -4,6 +4,7 @@ const links = [
 	{ href: "/what-is-frc", label: "What is FRC?" },
 	{ href: "/our-innovation", label: "Our Innovation" },
 	{ href: "/#awards", label: "Awards" },
+	{ href: "/sponsors", label: "Sponsors" },
 	{ href: "/contact", label: "Contact" },
 ];
 
@@ -12,7 +13,8 @@ const currentPath = new URL(Astro.request.url).pathname;
 
 <header class="bg-white border-b border-neutral-200 sticky top-0 z-50">
 	<nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-		<a href="/" class="text-lg sm:text-xl font-bold text-neutral-900">
+		<a href="/" class="flex items-center gap-2 text-lg sm:text-xl font-bold text-neutral-900">
+			<img src="/favicon.png" alt="Camber Robotics logo" class="w-8 h-8 sm:w-9 sm:h-9" />
 			Camber Robotics <span class="text-blue-600">9658</span>
 		</a>
 		<div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm sm:text-base">
