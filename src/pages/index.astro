@@ -1,5 +1,6 @@
 ---
 import { Picture } from "astro:assets";
+import camberLogo from "../assets/camber-logo.png";
 import yassImg from "../assets/YASS.png";
 import teamCommunityImg from "../assets/team-community.jpg";
 import teamHeroImg from "../assets/team-hero.jpg";
@@ -25,7 +26,7 @@ const awards = [
 	<section class="bg-white dark:bg-neutral-950 py-16 sm:py-20 px-4 sm:px-6">
 		<div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 			<div class="text-center lg:text-left">
-				<img src="/favicon.png" alt="Camber Robotics logo" class="w-16 h-16 mb-4 mx-auto lg:mx-0 dark:invert" />
+				<img src={camberLogo.src} alt="Camber Robotics logo" class="w-16 h-16 mb-4 mx-auto lg:mx-0 dark:invert" />
 				<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-neutral-900 dark:text-white">
 					Camber Robotics &mdash; FRC Team <span class="text-blue-600 dark:text-blue-400">9658</span>
 				</h1>
@@ -215,11 +216,18 @@ const awards = [
 						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 dark:border-neutral-700 rounded-lg px-4 hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
 					>
 						{sponsor.logo ? (
-							<img
-								src={sponsor.logo.src}
-								alt={sponsor.name}
-								class={`max-h-14 sm:max-h-16 max-w-full object-contain ${sponsor.filterClass || ""}`}
-							/>
+							sponsor.logoDark ? (
+								<>
+									<img src={sponsor.logo.src} alt={sponsor.name} class="max-h-14 sm:max-h-16 max-w-full object-contain dark:hidden" />
+									<img src={sponsor.logoDark.src} alt={sponsor.name} class="max-h-14 sm:max-h-16 max-w-full object-contain hidden dark:block" />
+								</>
+							) : (
+								<img
+									src={sponsor.logo.src}
+									alt={sponsor.name}
+									class={`max-h-14 sm:max-h-16 max-w-full object-contain ${sponsor.filterClass || ""}`}
+								/>
+							)
 						) : (
 							<span class="text-neutral-700 dark:text-neutral-300 font-semibold text-center text-sm sm:text-base">{sponsor.name}</span>
 						)}
@@ -241,7 +249,7 @@ const awards = [
 			</a>
 			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4">Yet Another Software Suite</h2>
 			<p class="text-sm sm:text-base lg:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
-				Yet Another Software Suite (YASS) supports Camber Robotics both as a financial sponsor and as a technology partner &mdash; we're one of its founding teams. YASS includes tools like Yet Another Generic Swerve Library (YAGSL), plus new libraries and a mechanisms generator, all aiming to raise the floor for FRC teams by simplifying programming and improving hardware compatibility for those lacking resources or experience. This year, we teamed up to present together at the <span class="font-semibold text-neutral-900 dark:text-white">FIRST World Championship</span>.
+				Yet Another Software Suite (YASS) supports Camber Robotics both as a financial sponsor and as a technology partner &mdash; we're one of its founding teams. YASS includes tools like Yet Another Generic Swerve Library (YAGSL), plus new libraries and a mechanisms generator, all aiming to raise the floor for FRC teams by simplifying programming and improving hardware compatibility for those lacking resources or experience. We presented YASS's mechanisms generator together at the <span class="font-semibold text-neutral-900 dark:text-white">2026 FRC Kickoff</span> in San Antonio and again at the <span class="font-semibold text-neutral-900 dark:text-white">FIRST World Championship</span>, sharing how to program with it easily and effectively.
 			</p>
 		</div>
 	</section>

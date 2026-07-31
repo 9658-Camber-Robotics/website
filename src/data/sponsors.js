@@ -1,4 +1,5 @@
 import frcTeesImg from "../assets/FRCTees.svg";
+import frcTeesDarkImg from "../assets/FRCTeesDark.svg";
 import geneHaasImg from "../assets/GeneHaasFoundation.webp";
 import honeywellImg from "../assets/Honeywell.svg";
 import keystoneImg from "../assets/Keystone.png";
@@ -10,6 +11,6 @@ export const sponsors = [
 	{ name: "Honeywell", url: "https://www.honeywell.com", logo: honeywellImg },
 	{ name: "Pine Lake Vistas", url: "https://pinelakevistas.com", logo: pineLakeVistasImg, filterClass: "dark:invert" },
 	{ name: "Yet Another Software Suite", url: "https://yetanothersoftwaresuite.com", logo: yassImg },
-	{ name: "FRC Tees", url: "https://frctees.com", logo: frcTeesImg, filterClass: "dark:invert" },
+	{ name: "FRC Tees", url: "https://frctees.com", logo: frcTeesImg, logoDark: frcTeesDarkImg },
 	{ name: "Keystone School", url: "https://www.keystoneschool.org", logo: keystoneImg, filterClass: "invert dark:invert-0" },
 ];

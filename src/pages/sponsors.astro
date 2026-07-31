@@ -157,7 +157,7 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 		<div class="max-w-3xl mx-auto text-center scroll-animate">
 			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-6">Our Impact</h2>
 			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
-				Beyond competition, our roughly <span class="font-semibold text-neutral-900 dark:text-white">20 students</span> put in real work in the community. This year, we presented at the <span class="font-semibold text-neutral-900 dark:text-white">San Antonio Manufacturing Association</span> and helped present alongside Yet Another Software Suite at the <span class="font-semibold text-neutral-900 dark:text-white">FIRST World Championship</span>.
+				Beyond competition, our roughly <span class="font-semibold text-neutral-900 dark:text-white">20 students</span> put in real work in the community. This year, we presented at the <span class="font-semibold text-neutral-900 dark:text-white">San Antonio Manufacturing Association</span> and helped present Yet Another Software Suite's mechanisms generator at the <span class="font-semibold text-neutral-900 dark:text-white">2026 FRC Kickoff</span> in San Antonio and the <span class="font-semibold text-neutral-900 dark:text-white">FIRST World Championship</span>.
 			</p>
 			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
 				We host monthly robotics events at Landa Library for elementary-aged kids, run a twice-monthly Coding Collaborative class for K&ndash;8 students, and bring robot demonstrations to local events like Youth Code Jam. In 2025, we started and now mentor FTC Team #31617 at our middle school, and we run an annual robotics summer camp.
@@ -215,11 +215,18 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 dark:border-neutral-700 rounded-lg px-4 bg-white dark:bg-neutral-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
 					>
 						{sponsor.logo ? (
-							<img
-								src={sponsor.logo.src}
-								alt={sponsor.name}
-								class={`max-h-14 sm:max-h-16 max-w-full object-contain ${sponsor.filterClass || ""}`}
-							/>
+							sponsor.logoDark ? (
+								<>
+									<img src={sponsor.logo.src} alt={sponsor.name} class="max-h-14 sm:max-h-16 max-w-full object-contain dark:hidden" />
+									<img src={sponsor.logoDark.src} alt={sponsor.name} class="max-h-14 sm:max-h-16 max-w-full object-contain hidden dark:block" />
+								</>
+							) : (
+								<img
+									src={sponsor.logo.src}
+									alt={sponsor.name}
+									class={`max-h-14 sm:max-h-16 max-w-full object-contain ${sponsor.filterClass || ""}`}
+								/>
+							)
 						) : (
 							<span class="text-neutral-700 dark:text-neutral-300 font-semibold text-center text-sm sm:text-base">{sponsor.name}</span>
 						)}
