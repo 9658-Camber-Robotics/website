@@ -49,6 +49,12 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 )}&body=${encodeURIComponent(
 	"Hi Camber Robotics team,\n\nI'm interested in learning more about sponsoring FRC Team 9658.\n\n",
 )}`;
+
+const individualDonationMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComponent(
+	"Individual Donation - Camber Robotics 9658",
+)}&body=${encodeURIComponent(
+	"Hi Camber Robotics team,\n\nI'd like to make an individual donation to support FRC Team 9658.\n\n",
+)}`;
 ---
 
 <Layout
@@ -68,7 +74,7 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 			</p>
 			<div class="flex flex-col sm:flex-row justify-center gap-4">
 				<a
-					href="mailto:contact@camberrobotics.com"
+					href={contactMailto}
 					class="inline-block rounded-md bg-red-600 text-white font-semibold px-8 py-3 hover:bg-red-700 transition-colors"
 				>
 					Become a Sponsor
@@ -176,7 +182,7 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 				A corporate sponsorship isn't the only way to help. Camber Robotics is a nonprofit, so individual donations of any size are tax-deductible and go directly toward competition fees, materials, and travel. Consult your tax advisor for details. We also welcome sponsorship and matching gifts through <span class="font-semibold text-neutral-900 dark:text-white">Benevity</span> &mdash; if your employer partners with Benevity, email us and we'll help you get set up.
 			</p>
 			<a
-				href="mailto:contact@camberrobotics.com"
+				href={individualDonationMailto}
 				class="inline-block rounded-md bg-red-600 text-white font-semibold px-8 py-3 hover:bg-red-700 transition-colors"
 			>
 				Email contact@camberrobotics.com
