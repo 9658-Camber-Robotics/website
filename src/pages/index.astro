@@ -1,656 +1,266 @@
 ---
-import { Image, Picture } from "astro:assets";
-import artpaceImg from "../assets/Artpace.svg";
-import communityImg from "../assets/community.avif";
-import frcImg from "../assets/FRC.png";
+import { Picture } from "astro:assets";
+import geneHaasImg from "../assets/GeneHaasFoundation.webp";
+import honeywellImg from "../assets/Honeywell.svg";
 import keystoneImg from "../assets/Keystone.png";
-import lowesImg from "../assets/Lowes.svg";
-import ourStoryImg from "../assets/our_story.avif";
-import outreachImg from "../assets/outreach_and_service.avif";
-import homeDepotImg from "../assets/TheHomeDepot.svg";
+import pineLakeVistasImg from "../assets/PineLakeVistas.png";
+import teamCommunityImg from "../assets/team-community.jpg";
+import teamHeroImg from "../assets/team-hero.jpg";
+import teamOutreachImg from "../assets/team-outreach.jpg";
+import teamStoryImg from "../assets/team-story.jpg";
+import yassImg from "../assets/YASS.png";
 import Layout from "../layouts/Layout.astro";
----
 
+const awards = [
+	{ year: "2024", title: "Highest-Placed Rookie Team", event: "FIT District San Antonio Event" },
+	{ year: "2024", title: "Judges' Award", event: "FIT District San Antonio Event" },
+	{ year: "2024", title: "State Championship Qualifier", event: "Texas State Championship" },
+	{ year: "2025", title: "Judge's Choice Award", event: "FIT District Houston Event" },
+	{ year: "2025", title: "Alliance 4 Captain", event: "FIT District Houston Event" },
+	{ year: "2025", title: "Rising All-Star Award", event: "Texas State Championship" },
+];
+
+const sponsors = [
+	{ name: "Gene Haas Foundation", url: "https://www.genehaasfoundation.org", logo: geneHaasImg },
+	{ name: "Honeywell", url: "https://www.honeywell.com", logo: honeywellImg },
+	{ name: "Pine Lake Vistas", url: "https://pinelakevistas.com", logo: pineLakeVistasImg },
+	{ name: "Yet Another Software Suite", url: "https://yetanothersoftwaresuite.com", logo: yassImg },
+	{ name: "Keystone School", url: "https://www.keystoneschool.org", logo: keystoneImg },
+];
+---
 
 <Layout
 	title="Camber Robotics - Team 9658"
-	description="We aim to create a robotics culture that values collaboration as much as innovation. FRC Team 9658 from Keystone School in San Antonio, Texas."
-	image="/community.avif"
+	description="FRC Team 9658 from Keystone School in San Antonio, Texas. We aim to create a robotics culture that values collaboration as much as innovation."
+	image="/team-photo.jpg"
 	url="https://camberrobotics.com"
 >
 	<!-- Hero Section -->
-	<section id="hero" class="bg-black text-white py-16 sm:py-24 lg:py-32 px-4 sm:px-6 overflow-hidden min-h-screen flex items-center">
-		<div class="max-w-6xl mx-auto text-center">
-			<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
-				<span class="inline-block">9658:</span>
-				<span class="typewriter-container">
-					<span id="typewriter-text" class="typewriter-text"></span>
-					<span class="typewriter-cursor">|</span>
-				</span>
-			</h1>
-			<p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-2000">
-				We aim to create a robotics culture that values collaboration as much as innovation.
-			</p>
-		</div>
-		<!-- Scroll Prompt -->
-		<div id="scroll-prompt" class="scroll-prompt">
-			<div class="scroll-prompt-content">
-				<span class="scroll-text">Scroll for more</span>
-				<div class="scroll-arrow">
-					<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
+	<section class="bg-white py-16 sm:py-20 px-4 sm:px-6">
+		<div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+			<div class="text-center lg:text-left">
+				<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-neutral-900">
+					Camber Robotics &mdash; FRC Team <span class="text-blue-600">9658</span>
+				</h1>
+				<p class="text-base sm:text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+					We aim to create a robotics culture that values collaboration as much as innovation.
+				</p>
+				<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+					<a
+						href="mailto:camberrobotics@gmail.com"
+						class="inline-block rounded-md bg-blue-600 text-white font-semibold px-6 py-3 hover:bg-blue-700 transition-colors"
+					>
+						Join Us
+					</a>
+					<a
+						href="#community"
+						class="inline-block rounded-md border border-neutral-300 text-neutral-800 font-semibold px-6 py-3 hover:border-blue-600 hover:text-blue-600 transition-colors"
+					>
+						Meet the Team
+					</a>
 				</div>
 			</div>
+			<Picture
+				src={teamHeroImg}
+				alt="Camber Robotics team members at an FRC competition"
+				widths={[400, 640]}
+				formats={["avif", "webp", "jpeg"]}
+				sizes="(max-width: 1024px) 90vw, 45vw"
+				width={640}
+				height={480}
+				class="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-sm"
+			/>
 		</div>
 	</section>
 
 	<!-- Mission Section -->
-	<section id="mission" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black">
-		<div class="max-w-4xl mx-auto text-center scroll-animate">
-			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 sm:mb-8 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+		<div class="max-w-3xl mx-auto text-center scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4 sm:mb-6">
 				Our Mission
-			</h3>
-			<p class="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
+			</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed">
 				We want to unite the worlds of STEM and the humanities: technical skills can be acquired and refined over time, but soft skills like communication, collaboration, and adaptability form the foundation of innovation and teamwork.
 			</p>
 		</div>
 	</section>
 
 	<!-- Community Section -->
-	<section id="community" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white relative">
-		<Picture
-			src={communityImg}
-			alt=""
-			widths={[240,384,540]}
-			formats={['avif','webp','jpeg']}
-			width={384}
-			height={384}
-			class="hidden lg:block absolute right-10 top-1/3 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl"
-		/>
-		<div class="max-w-5xl mx-auto scroll-animate relative z-10">
-			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Our Community</h3>
+	<section id="community" class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+		<div class="max-w-5xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Our Community</h2>
 			<div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-				<div class="scroll-animate-left lg:pl-12">
+				<div>
 					<Picture
-						src={communityImg}
-						alt="Community"
-						widths={[300,480,768]}
-						formats={['avif','webp','jpeg']}
+						src={teamCommunityImg}
+						alt="Camber Robotics team banner and pride flag at the team's workspace"
+						widths={[300, 480, 640]}
+						formats={["avif", "webp", "jpeg"]}
 						sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
 						width={600}
-						height={384}
-						class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6"
+						height={600}
+						class="w-full h-48 sm:h-64 lg:h-80 object-cover rounded-lg shadow-sm mb-6"
 					/>
-					<p class="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed mb-4 sm:mb-6">
-						<span class="text-white font-semibold">Camber = Diverse.</span> We strive to build an inclusive team that encourages collaboration. Our members come from Hispanic, LGBTQ+, and other backgrounds underrepresented in STEM.
-					</p>
-					<p class="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
-						Our team includes people with a broad range of interests representing the next generation of many fields:
+					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed mb-4">
+						Camber Robotics is about <span class="font-semibold text-neutral-900">30 students</span> from Keystone School in San Antonio, Texas. We strive to build an inclusive team that encourages collaboration &mdash; our members come from Hispanic, LGBTQ+, and other backgrounds underrepresented in STEM.
 					</p>
 				</div>
-				<div class="scroll-animate-right lg:pl-16">
-					<ul class="space-y-2 sm:space-y-3 text-sm sm:text-base lg:text-lg text-white">
-						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Engineering</li>
-						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Graphic design</li>
-						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Business</li>
-						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Computer science</li>
-						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>The humanities</li>
-						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>Political science</li>
-						<li class="flex items-center stagger-item"><span class="w-2 sm:w-3 h-2 sm:h-3 bg-white rounded-full mr-3 sm:mr-4 pulse-dot"></span>And more!</li>
+				<div>
+					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed mb-4">
+						Our team includes people with a broad range of interests representing the next generation of many fields:
+					</p>
+					<ul class="space-y-2 sm:space-y-3 text-sm sm:text-base lg:text-lg text-neutral-800">
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Engineering</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Graphic design</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Business</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Computer science</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>The humanities</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Political science</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>And more!</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-- Awards Section -->
+	<section id="awards" class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+		<div class="max-w-4xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Our Awards</h2>
+			<div class="grid sm:grid-cols-3 gap-4 sm:gap-6">
+				{awards.map((award) => (
+					<div class="bg-white border border-neutral-200 rounded-lg p-5 text-center shadow-sm">
+						<p class="text-blue-600 font-bold text-sm mb-2">{award.year}</p>
+						<p class="font-semibold text-neutral-900 mb-1">{award.title}</p>
+						<p class="text-neutral-500 text-sm">{award.event}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
 	<!-- Story Section -->
-	<section id="story" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black text-white relative">
-		<Picture
-			src={ourStoryImg}
-			alt=""
-			widths={[192,384,540]}
-			formats={['avif','webp','jpeg']}
-			width={384}
-			height={256}
-			class="hidden lg:block absolute left-10 top-1/10 transform -translate-y-1/2 w-96 h-64 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl animation-delay-1s"
-		/>
-		<div class="max-w-4xl mx-auto scroll-animate relative z-10">
-			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Our Story</h3>
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+		<div class="max-w-4xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 text-neutral-900">Our Story</h2>
 			<Picture
-				src={ourStoryImg}
-				alt="Our Story"
-				widths={[300,480,768]}
-				formats={['avif','webp','jpeg']}
+				src={teamStoryImg}
+				alt="Camber Robotics' competition robot"
+				widths={[300, 480, 640]}
+				formats={["avif", "webp", "jpeg"]}
 				sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
 				width={600}
-				height={384}
-				class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6 sm:mb-8"
+				height={400}
+				class="w-full h-48 sm:h-64 object-cover rounded-lg shadow-sm mb-6 sm:mb-8"
 			/>
-			<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200">
-				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. In our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom. Still, we managed to custom-design, build, and program a robot by the 2024 San Antonio competition and achieved <span class="font-semibold text-white highlight-text">highest-placed rookie team</span>. In the 2025 season our team managed to win the <span class="font-semibold text-white highlight-text">Judge's Choice Award</span> at the Houston competition and went on to win the <span class="font-semibold text-white highlight-text">Rising All-Star award</span> at state.
+			<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600">
+				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. In our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom &mdash; and we've kept growing since. During the 2024 season we raised nearly <span class="font-semibold text-neutral-900">$10,000</span> through FRC-related organizations and local businesses, matched by Keystone. Our leadership runs SA Smart, a nonprofit for water conservation, and our team includes NHS officers with <span class="font-semibold text-neutral-900">4,000+ volunteer hours</span> combined.
 			</p>
 		</div>
 	</section>
 
 	<!-- Outreach Section -->
-	<section id="outreach" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black relative">
-		<Picture
-			src={outreachImg}
-			alt=""
-			formats={['avif','webp','jpeg']}
-			widths={[240,384,540]}
-			width={384}
-			height={384}
-			class="hidden lg:block absolute right-20 transform -translate-y-1/2 w-96 h-96 object-cover opacity-80 floating-bg-image rounded-lg shadow-2xl animation-delay-2s"
-		/>
-		<div class="max-w-4xl mx-auto scroll-animate relative z-20">
-			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-12 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+		<div class="max-w-4xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 text-center mb-8 sm:mb-12">
 				Our Outreach & Service
-			</h3>
+			</h2>
 			<Picture
-				src={outreachImg}
-				alt="Outreach and Service"
-				formats={['avif','webp','jpeg']}
-				widths={[300,480,768]}
+				src={teamOutreachImg}
+				alt="Camber Robotics students collaborating on their robot"
+				formats={["avif", "webp", "jpeg"]}
+				widths={[300, 480]}
 				sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-				width={600}
-				height={384}
-				class="lg:hidden w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg mb-6 sm:mb-8"
+				width={480}
+				height={640}
+				class="w-full h-48 sm:h-64 object-cover rounded-lg shadow-sm mb-6 sm:mb-8"
 			/>
 			<div class="grid md:grid-cols-2 gap-6 sm:gap-8">
-				<div class="scroll-animate-left">
-					<h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 text-white underline decoration-2 underline-offset-4">Fundraising</h4>
-					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200">
-						During the 2024 season, we raised nearly <span class="font-semibold text-white highlight-text">$10,000</span> through connecting with FRC-related organizations and local businesses; this amount was matched by Keystone.
+				<div>
+					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900">Fundraising</h3>
+					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600">
+						During the 2024 season, we raised nearly <span class="font-semibold text-neutral-900">$10,000</span> through connecting with FRC-related organizations and local businesses; this amount was matched by Keystone.
 					</p>
 				</div>
-				<div class="scroll-animate-right">
-					<h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 text-white underline decoration-2 underline-offset-4">Community Impact</h4>
-					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200">
-						Our leadership runs SA Smart, a nonprofit for water conservation. Our team includes NHS officers with <span class="font-semibold text-white highlight-text">4000+ volunteer hours</span> combined.
+				<div>
+					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900">Community Impact</h3>
+					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600">
+						Our leadership runs SA Smart, a nonprofit for water conservation. Our team includes NHS officers with <span class="font-semibold text-neutral-900">4,000+ volunteer hours</span> combined.
 					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Partners Section -->
-	<section id="partners" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black">
-		<div class="max-w-6xl mx-auto scroll-animate">
-			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-white underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">Partners</h3>
-			<div class="flex justify-center items-center gap-4 sm:gap-8 lg:gap-16 flex-wrap">
-				<Image
-					src={keystoneImg}
-					alt="Keystone School"
-					width={320}
-					height={128}
-					class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-0s"
-				/>
-				<Image
-					src={artpaceImg}
-					alt="Artpace"
-					width={320}
-					height={128}
-					class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-3 transition-all duration-500 ease-in-out float-animation animation-delay-1s"
-				/>
-				<Image
-					src={frcImg}
-					alt="FIRST Robotics Competition"
-					width={320}
-					height={128}
-					class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-2s"
-				/>
-				<Image
-					src={homeDepotImg}
-					alt="The Home Depot"
-					width={320}
-					height={128}
-					class="h-12 sm:h-20 lg:h-32 max-w-[150px] sm:max-w-[250px] lg:max-w-[320px] object-contain hover:scale-110 lg:hover:scale-125 hover:-rotate-2 transition-all duration-500 ease-in-out float-animation animation-delay-0-5s"
-				/>
+	<!-- Sponsors Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+		<div class="max-w-5xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Our Sponsors</h2>
+			<div class="flex justify-center items-center gap-6 sm:gap-10 flex-wrap">
+				{sponsors.map((sponsor) => (
+					<a
+						href={sponsor.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 rounded-lg px-4 hover:border-blue-600 transition-colors"
+					>
+						{sponsor.logo ? (
+							<img src={sponsor.logo.src} alt={sponsor.name} class="max-h-14 sm:max-h-16 max-w-full object-contain" />
+						) : (
+							<span class="text-neutral-700 font-semibold text-center text-sm sm:text-base">{sponsor.name}</span>
+						)}
+					</a>
+				))}
 			</div>
 		</div>
 	</section>
 
-	<!-- More About Us Section -->
-	<section id="more-about" class="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 bg-black">
-		<div class="max-w-4xl mx-auto scroll-animate text-center">
-			<h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-8 sm:mb-12 underline decoration-2 sm:decoration-4 underline-offset-4 sm:underline-offset-8">
-				More About Us
-			</h3>
-			<div class="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 lg:gap-16">
-				<a
-					href="/what-is-frc"
-					class="text-xl sm:text-xl lg:text-2xl font-semibold text-white hover:text-gray-200 transition-all duration-500 ease-in-out float-animation animation-delay-0s glow-text hover:glow-intense"
-				>
-					What is FRC?
-				</a>
-				<a
-					href="/our-innovation"
-					class="text-xl sm:text-xl lg:text-2xl font-semibold text-white hover:text-gray-200 transition-all duration-500 ease-in-out float-animation animation-delay-1s glow-text hover:glow-intense"
-				>
-					Our Innovation
-				</a>
-				<a
-					href="/contact"
-					class="text-xl sm:text-xl lg:text-2xl font-semibold text-white hover:text-gray-200 transition-all duration-500 ease-in-out float-animation animation-delay-2s glow-text hover:glow-intense"
-				>
-					Get In Touch
-				</a>
-			</div>
+	<!-- Technology Partner Callout -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-blue-50">
+		<div class="max-w-3xl mx-auto text-center scroll-animate">
+			<p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-3">Technology Partner</p>
+			<a href="https://yetanothersoftwaresuite.com" target="_blank" rel="noopener noreferrer" class="inline-block mb-4">
+				<img src={yassImg.src} alt="Yet Another Software Suite" class="h-12 sm:h-16 mx-auto object-contain" />
+			</a>
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">Yet Another Software Suite</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-700 leading-relaxed">
+				Yet Another Software Suite supports Camber Robotics both as a financial sponsor and as a technology partner, collaborating with our team on software tooling.
+			</p>
+			<!-- TODO: confirm specifics of the technical collaboration with Yet Another Software Suite and refine this copy. -->
 		</div>
 	</section>
 
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: black;
-		}
-
-		#hero {
-			position: relative;
-			top: 0;
-			margin-top: -25px;
-			padding-top: calc(1rem + 25px);
-		}
-
-		@media (min-width: 640px) {
-			#hero {
-				margin-top: -50px;
-				padding-top: calc(1.5rem + 50px);
-			}
-		}
-
-		@media (min-width: 1024px) {
-			#hero {
-				padding-top: calc(2rem + 50px);
-			}
-		}
-
-		@keyframes fadeInUp {
-			from {
-				opacity: 0;
-				transform: translateY(30px);
-			}
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
-
-		@keyframes float {
-			0%, 100% {
-				transform: translateY(0px);
-			}
-			50% {
-				transform: translateY(-10px);
-			}
-		}
-
-		@keyframes floatBackground {
-			0%, 100% {
-				transform: translateY(0px) translateX(0px);
-			}
-			33% {
-				transform: translateY(-20px) translateX(10px);
-			}
-			66% {
-				transform: translateY(10px) translateX(-5px);
-			}
-		}
-
-		@keyframes pulse {
-			0%, 100% {
-				transform: scale(1);
-				opacity: 1;
-			}
-			50% {
-				transform: scale(1.2);
-				opacity: 0.8;
-			}
-		}
-
-		@keyframes highlightGlow {
-			0%, 100% {
-				text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-			}
-			50% {
-				text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-			}
-		}
-
-		@keyframes blink {
-			0%, 50% {
-				opacity: 1;
-			}
-			51%, 100% {
-				opacity: 0;
-			}
-		}
-
-		.animate-fade-in-up {
-			animation: fadeInUp 1s ease-out;
-		}
-
-		.scroll-animate {
-			opacity: 0;
-			transform: translateY(50px);
-			transition: all 1s ease-out;
-		}
-
-		.scroll-animate.animate {
-			opacity: 1;
-			transform: translateY(0);
-		}
-
-		.scroll-animate-left {
-			opacity: 0;
-			transform: translateX(-50px);
-			transition: all 1s ease-out;
-		}
-
-		.scroll-animate-left.animate {
-			opacity: 1;
-			transform: translateX(0);
-		}
-
-		.scroll-animate-right {
-			opacity: 0;
-			transform: translateX(50px);
-			transition: all 1s ease-out;
-		}
-
-		.scroll-animate-right.animate {
-			opacity: 1;
-			transform: translateX(0);
-		}
-
-		.stagger-item {
-			opacity: 0;
-			transform: translateX(30px);
-			transition: all 0.8s ease-out;
-		}
-
-		.stagger-item.animate {
-			opacity: 1;
-			transform: translateX(0);
-		}
-
-		.float-animation {
-			animation: float 3s ease-in-out infinite;
-		}
-
-		.floating-bg-image {
-			animation: floatBackground 6s ease-in-out infinite;
-			border-radius: 20px;
-		}
-
-		.pulse-dot {
-			animation: pulse 2s ease-in-out infinite;
-		}
-
-		.highlight-text {
-			animation: highlightGlow 2s ease-in-out infinite;
-		}
-
-		.typewriter-container {
-			display: inline-block;
-			margin-left: 0.25rem;
-		}
-
-		@media (min-width: 640px) {
-			.typewriter-container {
-				margin-left: 0.5rem;
-			}
-		}
-
-		.typewriter-text {
-			display: inline-block;
-		}
-
-		.typewriter-cursor {
-			display: inline-block;
-			animation: blink 1s infinite;
-			margin-left: 1px;
-		}
-
-		@media (min-width: 640px) {
-			.typewriter-cursor {
-				margin-left: 2px;
-			}
-		}
-
-		.animation-delay-2000 {
-			animation-delay: 2s;
-			animation-fill-mode: both;
-		}
-
-		.animation-delay-0s { animation-delay: 0s; }
-		.animation-delay-0-5s { animation-delay: 0.5s; }
-		.animation-delay-1s { animation-delay: 1s; }
-		.animation-delay-1-5s { animation-delay: 1.5s; }
-		.animation-delay-2s { animation-delay: 2s; }
-
-		.stagger-item:nth-child(1).animate { transition-delay: 0.1s; }
-		.stagger-item:nth-child(2).animate { transition-delay: 0.2s; }
-		.stagger-item:nth-child(3).animate { transition-delay: 0.3s; }
-		.stagger-item:nth-child(4).animate { transition-delay: 0.4s; }
-		.stagger-item:nth-child(5).animate { transition-delay: 0.5s; }
-		.stagger-item:nth-child(6).animate { transition-delay: 0.6s; }
-		.stagger-item:nth-child(7).animate { transition-delay: 0.7s; }
-
-		@media (hover: none) {
-			.hover\:scale-110:hover,
-			.hover\:scale-125:hover,
-			.hover\:rotate-3:hover,
-			.hover\:-rotate-3:hover,
-			.hover\:rotate-2:hover,
-			.hover\:-rotate-2:hover,
-			.hover\:rotate-1:hover {
-				transform: none;
-			}
-		}
-
-		.scroll-prompt {
-			position: fixed;
-			bottom: 2rem;
-			left: 50%;
-			transform: translateX(-50%) translateY(100px);
-			color: white;
-			z-index: 1000;
-			opacity: 0;
-			transition: all 0.5s ease-in-out;
-			pointer-events: none;
-		}
-
-		.scroll-prompt.show {
-			opacity: 1;
-			transform: translateX(-50%) translateY(0);
-			pointer-events: auto;
-		}
-
-		.scroll-prompt-content {
-			display: flex;
-			align-items: center;
-			gap: 0.5rem;
-		}
-
-		.scroll-text {
-			font-size: 0.875rem;
-			font-weight: 500;
-		}
-
-		.scroll-arrow {
-			animation: bounce 2s infinite;
-		}
-
-		@keyframes bounce {
-			0%, 20%, 50%, 80%, 100% {
-				transform: translateY(0);
-			}
-			40% {
-				transform: translateY(-5px);
-			}
-			60% {
-				transform: translateY(-3px);
-			}
-		}
-
-		@media (max-width: 640px) {
-			.scroll-prompt {
-				bottom: 1.5rem;
-				padding: 0.75rem 1.25rem;
-			}
-
-			.scroll-text {
-				font-size: 0.8rem;
-			}
-		}
-
-		.glow-text {
-			text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-			transition: text-shadow 0.3s ease-in-out;
-		}
-
-		.glow-text:hover,
-		.hover\:glow-intense:hover {
-			text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
-		}
-
-		@media (hover: none) {
-			.hover\:glow-intense:hover {
-				text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-			}
-		}
-	</style>
-
-	<script>
-		function detectDevice() {
-			const isMobile = window.innerWidth <= 768;
-			const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
-
-			return { isMobile, isTablet };
-		}
-
-		function initializeObserver() {
-			const { isMobile, isTablet } = detectDevice();
-
-			const observerOptions = {
-				threshold: isMobile ? 0.1 : isTablet ? 0.12 : 0.15,
-				rootMargin: isMobile ? '0px 0px -30px 0px' : isTablet ? '0px 0px -70px 0px' : '0px 0px -100px 0px'
-			};
-
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('animate');
-
-						const staggerItems = entry.target.querySelectorAll('.stagger-item');
-						staggerItems.forEach(item => {
-							item.classList.add('animate');
-						});
-					}
-				});
-			}, observerOptions);
-
-			document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right').forEach(el => {
-				observer.observe(el);
-			});
-		}
-
-		function initializeParallax() {
-			window.addEventListener('scroll', () => {
-				const { isMobile, isTablet } = detectDevice();
-				const windowHeight = window.innerHeight;
-				const hero = document.getElementById('hero');
-
-				if (hero) {
-					const heroRect = hero.getBoundingClientRect();
-					const heroTop = heroRect.top;
-					const heroHeight = heroRect.height;
-
-					if (heroTop < windowHeight && heroTop > -heroHeight) {
-						const progress = (windowHeight - heroTop) / (windowHeight + heroHeight);
-						let parallaxOffset;
-
-						if (isMobile) {
-							parallaxOffset = progress * 30;
-						} else if (isTablet) {
-							parallaxOffset = progress * 60;
-						} else {
-							parallaxOffset = progress * 100;
-						}
-
-						hero.style.transform = `translateY(${parallaxOffset}px)`;
-					}
-				}
-			});
-		}
-
-		function typeWriter() {
-			const text = " Camber Robotics";
-			const element = document.getElementById('typewriter-text');
-			const cursor = document.querySelector('.typewriter-cursor');
-
-			if (!element || !cursor) return;
-
-			let i = 0;
-
-			function type() {
-				if (i < text.length) {
-					element.textContent += text.charAt(i);
-					i++;
-					setTimeout(type, 100);
-				} else {
-					setTimeout(() => {
-						if (cursor) {
-							cursor.style.display = 'none';
-						}
-					}, 1000);
-				}
-			}
-
-			setTimeout(type, 800);
-		}
-
-		function initializeScrollPrompt() {
-			const scrollPrompt = document.getElementById('scroll-prompt');
-			let hasScrolled = false;
-			let promptTimeout;
-
-			promptTimeout = setTimeout(() => {
-				if (!hasScrolled && scrollPrompt) {
-					scrollPrompt.classList.add('show');
-				}
-			}, 3000);
-
-			window.addEventListener('scroll', () => {
-				if (window.scrollY > 50) {
-					hasScrolled = true;
-					clearTimeout(promptTimeout);
-					if (scrollPrompt) {
-						scrollPrompt.classList.remove('show');
-					}
-				}
-			});
-		}
-
-		function handleResize() {
-			initializeObserver();
-		}
-
-		document.addEventListener('DOMContentLoaded', () => {
-			initializeObserver();
-			initializeParallax();
-			typeWriter();
-			initializeScrollPrompt();
-		});
-
-		let resizeTimeout;
-		window.addEventListener('resize', () => {
-			clearTimeout(resizeTimeout);
-			resizeTimeout = setTimeout(handleResize, 250);
-		});
-	</script>
+	<!-- Instagram Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+		<div class="max-w-3xl mx-auto text-center scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2">Follow Us</h2>
+			<p class="text-neutral-600 mb-8">
+				<a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:underline">@camber.9658</a>
+				&mdash; see our latest photos below.
+			</p>
+			<!-- TODO: replace WIDGET_ID with a real SnapWidget feed ID for @camber.9658 (create one for free at snapwidget.com). LightWidget/Elfsight are drop-in swaps if preferred. -->
+			<iframe
+				src="https://snapwidget.com/embed/WIDGET_ID"
+				class="snapwidget-widget w-full"
+				style="border:none; overflow:hidden; width:100%; height:400px;"
+				title="Camber Robotics Instagram feed"
+			></iframe>
+		</div>
+	</section>
+
+	<!-- Join CTA Section -->
+	<section class="py-16 sm:py-24 px-4 sm:px-6 bg-blue-600">
+		<div class="max-w-2xl mx-auto text-center scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Interested in Joining Camber Robotics?</h2>
+			<p class="text-blue-100 mb-8">
+				We're always looking for new students to join our team &mdash; no experience required.
+			</p>
+			<a
+				href="mailto:camberrobotics@gmail.com"
+				class="inline-block rounded-md bg-white text-blue-600 font-semibold px-8 py-3 hover:bg-blue-50 transition-colors"
+			>
+				Email camberrobotics@gmail.com
+			</a>
+		</div>
+	</section>
 </Layout>

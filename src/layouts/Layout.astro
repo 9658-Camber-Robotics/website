@@ -4,6 +4,7 @@ import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import githubIcon from "../assets/github.svg";
 import instagramIcon from "../assets/Instagram.svg";
+import Nav from "../components/Nav.astro";
 
 export interface Props {
 	title?: string;
@@ -15,7 +16,7 @@ export interface Props {
 const {
 	title = "Camber Robotics",
 	description = "A modern web framework",
-	image = "/community.avif",
+	image = "/team-photo.jpg",
 	url = "https://camberrobotics.com",
 } = Astro.props;
 const year = new Date().getFullYear();
@@ -60,11 +61,12 @@ const year = new Date().getFullYear();
     <title>{title}</title>
 </head>
 <body>
+<Nav />
 <main>
     <slot />
 </main>
 
-<footer class="bg-black text-white py-8 px-6 text-center">
+<footer class="bg-neutral-50 border-t border-neutral-200 text-neutral-700 py-10 px-6 text-center">
     <div class="flex flex-col items-center gap-4">
         <div class="flex gap-4">
             <a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
@@ -74,8 +76,30 @@ const year = new Date().getFullYear();
                 <img src={githubIcon.src} alt="GitHub" class="w-6 h-6" />
             </a>
         </div>
-        <p class="text-gray-300">&copy; {year} Camber Robotics</p>
+        <a href="mailto:camberrobotics@gmail.com" class="font-semibold text-blue-600 hover:underline">camberrobotics@gmail.com</a>
+        <p class="text-neutral-500 text-sm">&copy; {year} Camber Robotics &mdash; FRC Team 9658</p>
     </div>
 </footer>
+
+<script>
+    function initScrollReveal() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: "0px 0px -80px 0px",
+        });
+
+        document.querySelectorAll(".scroll-animate").forEach((el) => {
+            observer.observe(el);
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", initScrollReveal);
+</script>
 </body>
 </html>
