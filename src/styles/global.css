@@ -20,11 +20,11 @@
 }
 
 ::selection {
-    background: #bfdbfe;
+    background: #fecaca;
 }
 
 .dark ::selection {
-    background: #1e3a8a;
+    background: #7f1d1d;
 }
 
 .scroll-animate {

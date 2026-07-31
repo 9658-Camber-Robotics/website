@@ -29,7 +29,7 @@ const awards = [
 			<div class="text-center lg:text-left">
 				<img src={camberLogo.src} alt="Camber Robotics logo" class="w-16 h-16 mb-4 mx-auto lg:mx-0 dark:invert" />
 				<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-neutral-900 dark:text-white">
-					Camber Robotics &mdash; FRC Team <span class="text-blue-600 dark:text-blue-400">9658</span>
+					Camber Robotics &mdash; FRC Team <span class="text-red-600 dark:text-red-400">9658</span>
 				</h1>
 				<p class="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
 					We aim to create a robotics culture that values collaboration as much as innovation.
@@ -37,13 +37,13 @@ const awards = [
 				<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
 					<a
 						href="mailto:contact@camberrobotics.com"
-						class="inline-block rounded-md bg-blue-600 text-white font-semibold px-6 py-3 hover:bg-blue-700 transition-colors"
+						class="inline-block rounded-md bg-red-600 text-white font-semibold px-6 py-3 hover:bg-red-700 transition-colors"
 					>
 						Join Us
 					</a>
 					<a
 						href="#community"
-						class="inline-block rounded-md border border-neutral-300 dark:border-neutral-600 text-neutral-800 dark:text-neutral-200 font-semibold px-6 py-3 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+						class="inline-block rounded-md border border-neutral-300 dark:border-neutral-600 text-neutral-800 dark:text-neutral-200 font-semibold px-6 py-3 hover:border-red-600 dark:hover:border-red-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"
 					>
 						Meet the Team
 					</a>
@@ -117,12 +117,12 @@ const awards = [
 						Our team includes people with a broad range of interests representing the next generation of many fields:
 					</p>
 					<ul class="space-y-2 sm:space-y-3 text-sm sm:text-base lg:text-lg text-neutral-800 dark:text-neutral-200">
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Engineering</li>
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Graphic design</li>
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Finance</li>
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Data science</li>
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Arts &amp; humanities</li>
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>And more!</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Engineering</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Graphic design</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Finance</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Data science</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-red-600 rounded-full mr-3"></span>Arts &amp; humanities</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-red-600 rounded-full mr-3"></span>And more!</li>
 					</ul>
 					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mt-4">
 						We're also partnered with Students FIRST, ND of FIRST, LGBTQ of FIRST, and Menstrual Equity of FIRST to encourage accessibility and equality within robotics.
@@ -152,14 +152,14 @@ const awards = [
 			<div class="grid sm:grid-cols-3 gap-4 sm:gap-6">
 				{awards.map((award) => (
 					<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-5 text-center shadow-sm">
-						<p class="text-blue-600 dark:text-blue-400 font-bold text-sm mb-2">{award.year}</p>
+						<p class="text-red-600 dark:text-red-400 font-bold text-sm mb-2">{award.year}</p>
 						<p class="font-semibold text-neutral-900 dark:text-white mb-1">{award.title}</p>
 						<p class="text-neutral-500 dark:text-neutral-400 text-sm">{award.event}</p>
 					</div>
 				))}
 			</div>
 			<p class="text-center mt-8">
-				<a href="https://www.thebluealliance.com/team/9658" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">See our full record on The Blue Alliance &rarr;</a>
+				<a href="https://www.thebluealliance.com/team/9658" target="_blank" rel="noopener noreferrer" class="font-semibold text-red-600 dark:text-red-400 hover:underline">See our full record on The Blue Alliance &rarr;</a>
 			</p>
 		</div>
 	</section>
@@ -245,7 +245,7 @@ const awards = [
 						href={sponsor.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 dark:border-neutral-700 rounded-lg px-4 hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
+						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 dark:border-neutral-700 rounded-lg px-4 hover:border-red-600 dark:hover:border-red-400 transition-colors"
 					>
 						{sponsor.logo ? (
 							sponsor.logoDark ? (
@@ -267,15 +267,15 @@ const awards = [
 				))}
 			</div>
 			<p class="text-center mt-8">
-				<a href="/sponsors" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Become a Sponsor &rarr;</a>
+				<a href="/sponsors" class="font-semibold text-red-600 dark:text-red-400 hover:underline">Become a Sponsor &rarr;</a>
 			</p>
 		</div>
 	</section>
 
 	<!-- Technology Partner Callout -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-blue-50 dark:bg-blue-950">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-red-50 dark:bg-red-950">
 		<div class="max-w-3xl mx-auto text-center scroll-animate">
-			<p class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wide mb-3">Technology Partner</p>
+			<p class="text-red-600 dark:text-red-400 font-semibold text-sm uppercase tracking-wide mb-3">Technology Partner</p>
 			<a href="https://yetanothersoftwaresuite.com" target="_blank" rel="noopener noreferrer" class="inline-block mb-4">
 				<img src={yassImg.src} alt="Yet Another Software Suite" class="h-12 sm:h-16 mx-auto object-contain" />
 			</a>
@@ -291,7 +291,7 @@ const awards = [
 		<div class="max-w-3xl mx-auto text-center scroll-animate">
 			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-2">Follow Us</h2>
 			<p class="text-neutral-600 dark:text-neutral-300 mb-8">
-				<a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">@camber.9658</a>
+				<a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="font-semibold text-red-600 dark:text-red-400 hover:underline">@camber.9658</a>
 				&mdash; see our latest photos below.
 			</p>
 			<iframe
@@ -332,15 +332,15 @@ const awards = [
 	</script>
 
 	<!-- Join CTA Section -->
-	<section class="py-16 sm:py-24 px-4 sm:px-6 bg-blue-600">
+	<section class="py-16 sm:py-24 px-4 sm:px-6 bg-red-600">
 		<div class="max-w-2xl mx-auto text-center scroll-animate">
 			<h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Interested in Joining Camber Robotics?</h2>
-			<p class="text-blue-100 mb-8">
+			<p class="text-red-100 mb-8">
 				We're always looking for new students to join our team &mdash; no experience required.
 			</p>
 			<a
 				href="mailto:contact@camberrobotics.com"
-				class="inline-block rounded-md bg-white text-blue-600 font-semibold px-8 py-3 hover:bg-blue-50 transition-colors"
+				class="inline-block rounded-md bg-white text-red-600 font-semibold px-8 py-3 hover:bg-red-50 transition-colors"
 			>
 				Email contact@camberrobotics.com
 			</a>

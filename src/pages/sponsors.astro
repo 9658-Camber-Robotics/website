@@ -69,14 +69,14 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 			<div class="flex flex-col sm:flex-row justify-center gap-4">
 				<a
 					href="mailto:contact@camberrobotics.com"
-					class="inline-block rounded-md bg-blue-600 text-white font-semibold px-8 py-3 hover:bg-blue-700 transition-colors"
+					class="inline-block rounded-md bg-red-600 text-white font-semibold px-8 py-3 hover:bg-red-700 transition-colors"
 				>
 					Become a Sponsor
 				</a>
 				<a
 					href="/CamberRoboticsSponsorshipPacket2025-2026.pdf"
 					download
-					class="inline-block rounded-md border border-neutral-300 dark:border-neutral-600 text-neutral-800 dark:text-neutral-200 font-semibold px-8 py-3 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+					class="inline-block rounded-md border border-neutral-300 dark:border-neutral-600 text-neutral-800 dark:text-neutral-200 font-semibold px-8 py-3 hover:border-red-600 dark:hover:border-red-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"
 				>
 					Download Sponsorship Packet
 				</a>
@@ -111,7 +111,7 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 					<div class="bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
 						<div class="sm:w-32 shrink-0">
 							<p class="font-bold text-lg text-neutral-900 dark:text-white">{tier.name}</p>
-							<p class="text-blue-600 dark:text-blue-400 font-semibold">{tier.price}</p>
+							<p class="text-red-600 dark:text-red-400 font-semibold">{tier.price}</p>
 						</div>
 						<p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">{tier.benefits}</p>
 					</div>
@@ -141,7 +141,7 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 							<span class="font-semibold text-neutral-900 dark:text-white">${item.amount.toLocaleString()} ({item.percent}%)</span>
 						</div>
 						<div class="h-2 rounded-full bg-neutral-200 dark:bg-neutral-700 overflow-hidden">
-							<div class="h-full rounded-full bg-blue-600" style={`width: ${item.percent}%`}></div>
+							<div class="h-full rounded-full bg-red-600" style={`width: ${item.percent}%`}></div>
 						</div>
 					</div>
 				))}
@@ -169,7 +169,7 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 	</section>
 
 	<!-- Individual Donations Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-blue-50 dark:bg-blue-950">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-red-50 dark:bg-red-950">
 		<div class="max-w-2xl mx-auto text-center scroll-animate">
 			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4">Individual Donations Welcome</h2>
 			<p class="text-sm sm:text-base lg:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
@@ -177,7 +177,7 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 			</p>
 			<a
 				href="mailto:contact@camberrobotics.com"
-				class="inline-block rounded-md bg-blue-600 text-white font-semibold px-8 py-3 hover:bg-blue-700 transition-colors"
+				class="inline-block rounded-md bg-red-600 text-white font-semibold px-8 py-3 hover:bg-red-700 transition-colors"
 			>
 				Email contact@camberrobotics.com
 			</a>
@@ -194,7 +194,7 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 			<ul class="grid sm:grid-cols-2 gap-3 sm:gap-4">
 				{inKindSupport.map((item) => (
 					<li class="flex items-start gap-2 text-sm sm:text-base text-neutral-700 dark:text-neutral-300">
-						<span class="text-blue-600 dark:text-blue-400 mt-0.5">&#10003;</span>
+						<span class="text-red-600 dark:text-red-400 mt-0.5">&#10003;</span>
 						<span>{item}</span>
 					</li>
 				))}
@@ -212,7 +212,7 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 						href={sponsor.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 dark:border-neutral-700 rounded-lg px-4 bg-white dark:bg-neutral-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
+						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 dark:border-neutral-700 rounded-lg px-4 bg-white dark:bg-neutral-800 hover:border-red-600 dark:hover:border-red-400 transition-colors"
 					>
 						{sponsor.logo ? (
 							sponsor.logoDark ? (
@@ -237,15 +237,15 @@ const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComp
 	</section>
 
 	<!-- CTA Section -->
-	<section class="py-16 sm:py-24 px-4 sm:px-6 bg-blue-600">
+	<section class="py-16 sm:py-24 px-4 sm:px-6 bg-red-600">
 		<div class="max-w-2xl mx-auto text-center scroll-animate">
 			<h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Partner With Us?</h2>
-			<p class="text-blue-100 mb-8">
+			<p class="text-red-100 mb-8">
 				Whether it's sponsorship, mentorship, or a personal donation, we'd love to hear from you.
 			</p>
 			<a
 				href={contactMailto}
-				class="inline-block rounded-md bg-white text-blue-600 font-semibold px-8 py-3 hover:bg-blue-50 transition-colors"
+				class="inline-block rounded-md bg-white text-red-600 font-semibold px-8 py-3 hover:bg-red-50 transition-colors"
 			>
 				Contact Us
 			</a>
