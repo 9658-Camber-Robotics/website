@@ -9,12 +9,10 @@ import { sponsors } from "../data/sponsors.js";
 import Layout from "../layouts/Layout.astro";
 
 const awards = [
-	{ year: "2024", title: "Highest-Placed Rookie Team", event: "FIT District San Antonio Event" },
-	{ year: "2024", title: "Judges' Award", event: "FIT District San Antonio Event" },
-	{ year: "2024", title: "State Championship Qualifier", event: "Texas State Championship" },
-	{ year: "2025", title: "Judge's Choice Award", event: "FIT District Houston Event" },
-	{ year: "2025", title: "Alliance 4 Captain", event: "FIT District Houston Event" },
-	{ year: "2025", title: "Rising All-Star Award", event: "Texas State Championship" },
+	{ year: "2025", title: "4th Place Overall", event: "FIT District Houston Event (out of 31 teams)" },
+	{ year: "2025", title: "Judges' Award", event: "FIT District Houston Event" },
+	{ year: "2025", title: "4th Alliance Captain", event: "FIT District Houston Event" },
+	{ year: "2025", title: "Rising All-Star Award", event: "Texas State Championship (out of 90 teams)" },
 ];
 ---
 
@@ -25,26 +23,26 @@ const awards = [
 	url="https://camberrobotics.com"
 >
 	<!-- Hero Section -->
-	<section class="bg-white py-16 sm:py-20 px-4 sm:px-6">
+	<section class="bg-white dark:bg-neutral-950 py-16 sm:py-20 px-4 sm:px-6">
 		<div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 			<div class="text-center lg:text-left">
-				<img src="/favicon.png" alt="Camber Robotics logo" class="w-16 h-16 mb-4 mx-auto lg:mx-0" />
-				<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-neutral-900">
-					Camber Robotics &mdash; FRC Team <span class="text-blue-600">9658</span>
+				<img src="/favicon.png" alt="Camber Robotics logo" class="w-16 h-16 mb-4 mx-auto lg:mx-0 dark:invert" />
+				<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-neutral-900 dark:text-white">
+					Camber Robotics &mdash; FRC Team <span class="text-blue-600 dark:text-blue-400">9658</span>
 				</h1>
-				<p class="text-base sm:text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+				<p class="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
 					We aim to create a robotics culture that values collaboration as much as innovation.
 				</p>
 				<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
 					<a
-						href="mailto:camberrobotics@gmail.com"
+						href="mailto:contact@camberrobotics.com"
 						class="inline-block rounded-md bg-blue-600 text-white font-semibold px-6 py-3 hover:bg-blue-700 transition-colors"
 					>
 						Join Us
 					</a>
 					<a
 						href="#community"
-						class="inline-block rounded-md border border-neutral-300 text-neutral-800 font-semibold px-6 py-3 hover:border-blue-600 hover:text-blue-600 transition-colors"
+						class="inline-block rounded-md border border-neutral-300 dark:border-neutral-600 text-neutral-800 dark:text-neutral-200 font-semibold px-6 py-3 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
 					>
 						Meet the Team
 					</a>
@@ -64,21 +62,21 @@ const awards = [
 	</section>
 
 	<!-- Mission Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
 		<div class="max-w-3xl mx-auto text-center scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4 sm:mb-6">
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4 sm:mb-6">
 				Our Mission
 			</h2>
-			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed">
-				We want to unite the worlds of STEM and the humanities: technical skills can be acquired and refined over time, but soft skills like communication, collaboration, and adaptability form the foundation of innovation and teamwork.
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+				We aim to make learning STEM fun and accessible for those who lack educational opportunities and resources, in and out of robotics.
 			</p>
 		</div>
 	</section>
 
 	<!-- Community Section -->
-	<section id="community" class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+	<section id="community" class="py-16 sm:py-20 px-4 sm:px-6 bg-white dark:bg-neutral-950">
 		<div class="max-w-5xl mx-auto scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Our Community</h2>
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900 dark:text-white">Our Community</h2>
 			<div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
 				<div>
 					<Picture
@@ -91,41 +89,43 @@ const awards = [
 						height={600}
 						class="w-full h-48 sm:h-64 lg:h-80 object-cover rounded-lg shadow-sm mb-6"
 					/>
-					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed mb-4">
-						Camber Robotics is about <span class="font-semibold text-neutral-900">30 students</span> from Keystone School in San Antonio, Texas. We strive to build an inclusive team that encourages collaboration &mdash; our members come from Hispanic, LGBTQ+, and other backgrounds underrepresented in STEM.
+					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+						Camber Robotics is about <span class="font-semibold text-neutral-900 dark:text-white">20 students</span> from Keystone School in San Antonio, Texas, meeting two to three times a week. We strive to build an inclusive team that encourages collaboration &mdash; our members come from Hispanic, LGBTQ+, and other backgrounds underrepresented in STEM.
 					</p>
-					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed mb-4">
+					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
 						Our alumni go on to study at prestigious universities around the world, carrying the skills and mindset they built on Camber with them.
 					</p>
 				</div>
 				<div>
-					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed mb-4">
+					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
 						Our team includes people with a broad range of interests representing the next generation of many fields:
 					</p>
-					<ul class="space-y-2 sm:space-y-3 text-sm sm:text-base lg:text-lg text-neutral-800">
+					<ul class="space-y-2 sm:space-y-3 text-sm sm:text-base lg:text-lg text-neutral-800 dark:text-neutral-200">
 						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Engineering</li>
 						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Graphic design</li>
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Business</li>
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Computer science</li>
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>The humanities</li>
-						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Political science</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Finance</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Data science</li>
+						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Arts &amp; humanities</li>
 						<li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>And more!</li>
 					</ul>
+					<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mt-4">
+						We're also partnered with Students FIRST, ND of FIRST, LGBTQ of FIRST, and Menstrual Equity of FIRST to encourage accessibility and equality within robotics.
+					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Awards Section -->
-	<section id="awards" class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+	<section id="awards" class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
 		<div class="max-w-4xl mx-auto scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Our Awards</h2>
-			<div class="grid sm:grid-cols-3 gap-4 sm:gap-6">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900 dark:text-white">Our Awards</h2>
+			<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
 				{awards.map((award) => (
-					<div class="bg-white border border-neutral-200 rounded-lg p-5 text-center shadow-sm">
-						<p class="text-blue-600 font-bold text-sm mb-2">{award.year}</p>
-						<p class="font-semibold text-neutral-900 mb-1">{award.title}</p>
-						<p class="text-neutral-500 text-sm">{award.event}</p>
+					<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-5 text-center shadow-sm">
+						<p class="text-blue-600 dark:text-blue-400 font-bold text-sm mb-2">{award.year}</p>
+						<p class="font-semibold text-neutral-900 dark:text-white mb-1">{award.title}</p>
+						<p class="text-neutral-500 dark:text-neutral-400 text-sm">{award.event}</p>
 					</div>
 				))}
 			</div>
@@ -133,9 +133,9 @@ const awards = [
 	</section>
 
 	<!-- Story Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white dark:bg-neutral-950">
 		<div class="max-w-4xl mx-auto scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 text-neutral-900">Our Story</h2>
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 text-neutral-900 dark:text-white">Our Story</h2>
 			<Picture
 				src={teamStoryImg}
 				alt="Camber Robotics' competition robot"
@@ -146,16 +146,28 @@ const awards = [
 				height={400}
 				class="w-full h-48 sm:h-64 object-cover rounded-lg shadow-sm mb-6 sm:mb-8"
 			/>
-			<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600">
-				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. In our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom &mdash; and we've kept growing since. In 2026, we started an FTC team at our middle school, extending robotics to our youngest students. During the 2024 season we raised nearly <span class="font-semibold text-neutral-900">$10,000</span> through FRC-related organizations and local businesses, matched by Keystone, and we raised over <span class="font-semibold text-neutral-900">$10,000</span> again during the 2026 season. Our leadership runs SA Smart, a nonprofit for water conservation, and our team includes NHS officers with <span class="font-semibold text-neutral-900">4,000+ volunteer hours</span> combined.
+			<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
+				In 2023, a group of Keystone School students decided they wanted to create an FRC team to pursue their interests in engineering. That idea has since grown into today's Camber Robotics, which now embraces skills beyond STEM. In our rookie year, we had no mentors, little knowledge of FRC, and worked out of the corner of a middle-school classroom &mdash; and we've kept growing since. In 2025, we started FTC Team #31617 at our middle school, extending robotics to our youngest students. During the 2024 season we raised nearly <span class="font-semibold text-neutral-900 dark:text-white">$10,000</span> through FRC-related organizations and local businesses, matched by Keystone, and we raised over <span class="font-semibold text-neutral-900 dark:text-white">$10,000</span> again during the 2026 season. Our leadership runs SA Smart, a nonprofit for water conservation, and our team includes NHS officers with <span class="font-semibold text-neutral-900 dark:text-white">4,000+ volunteer hours</span> combined.
 			</p>
+			<div class="mt-6 sm:mt-8">
+				<div class="relative w-full rounded-lg overflow-hidden shadow-sm" style="padding-top: 56.25%;">
+					<iframe
+						class="absolute inset-0 w-full h-full"
+						src="https://www.youtube.com/embed/xecPB4BlcM8"
+						title="Camber Robotics 2024 Season Recap"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+				<p class="text-center text-sm text-neutral-500 dark:text-neutral-400 mt-2">Watch our 2024 season recap</p>
+			</div>
 		</div>
 	</section>
 
 	<!-- Outreach Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
 		<div class="max-w-4xl mx-auto scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 text-center mb-8 sm:mb-12">
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white text-center mb-8 sm:mb-12">
 				Our Outreach & Service
 			</h2>
 			<Picture
@@ -170,21 +182,21 @@ const awards = [
 			/>
 			<div class="grid md:grid-cols-3 gap-6 sm:gap-8">
 				<div>
-					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900">Fundraising</h3>
-					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600">
-						During the 2024 season, we raised nearly <span class="font-semibold text-neutral-900">$10,000</span> through connecting with FRC-related organizations and local businesses, matched by Keystone. We raised over <span class="font-semibold text-neutral-900">$10,000</span> again during the 2026 season.
+					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900 dark:text-white">Fundraising</h3>
+					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
+						During the 2024 season, we raised nearly <span class="font-semibold text-neutral-900 dark:text-white">$10,000</span> through connecting with FRC-related organizations and local businesses, matched by Keystone. We raised over <span class="font-semibold text-neutral-900 dark:text-white">$10,000</span> again during the 2026 season.
 					</p>
 				</div>
 				<div>
-					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900">Community Impact</h3>
-					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600">
-						Our leadership runs SA Smart, a nonprofit for water conservation. Our team includes NHS officers with <span class="font-semibold text-neutral-900">4,000+ volunteer hours</span> combined.
+					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900 dark:text-white">Youth Programs</h3>
+					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
+						We host monthly robotics events at South Side public libraries for elementary students using kits like Dot and Dash and LEGO EV3, run a twice-monthly Coding Collaborative class for K&ndash;8 students, and bring robot demonstrations to local events like Youth Code Jam. We also run an annual robotics summer camp for middle schoolers.
 					</p>
 				</div>
 				<div>
-					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900">Local Partnerships</h3>
-					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600">
-						We partner with other FRC teams around San Antonio, sharing knowledge, resources, and mentorship to help grow robotics across the city. We also volunteer at local FTC events and started our own FTC team at our middle school in 2026.
+					<h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-neutral-900 dark:text-white">Community Impact</h3>
+					<p class="text-sm sm:text-base lg:text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
+						Our leadership runs SA Smart, a nonprofit for water conservation. Our team includes NHS members with <span class="font-semibold text-neutral-900 dark:text-white">4,000+ volunteer hours</span> combined, and in 2025 we started and now mentor FTC Team #31617 at our middle school.
 					</p>
 				</div>
 			</div>
@@ -192,56 +204,55 @@ const awards = [
 	</section>
 
 	<!-- Sponsors Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white dark:bg-neutral-950">
 		<div class="max-w-5xl mx-auto scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Our Sponsors</h2>
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900 dark:text-white">Our Sponsors</h2>
 			<div class="flex justify-center items-center gap-6 sm:gap-10 flex-wrap">
 				{sponsors.map((sponsor) => (
 					<a
 						href={sponsor.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 rounded-lg px-4 hover:border-blue-600 transition-colors"
+						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 dark:border-neutral-700 rounded-lg px-4 hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
 					>
 						{sponsor.logo ? (
 							<img
 								src={sponsor.logo.src}
 								alt={sponsor.name}
-								class={`max-h-14 sm:max-h-16 max-w-full object-contain ${sponsor.invert ? "invert" : ""}`}
+								class={`max-h-14 sm:max-h-16 max-w-full object-contain ${sponsor.filterClass || ""}`}
 							/>
 						) : (
-							<span class="text-neutral-700 font-semibold text-center text-sm sm:text-base">{sponsor.name}</span>
+							<span class="text-neutral-700 dark:text-neutral-300 font-semibold text-center text-sm sm:text-base">{sponsor.name}</span>
 						)}
 					</a>
 				))}
 			</div>
 			<p class="text-center mt-8">
-				<a href="/sponsors" class="font-semibold text-blue-600 hover:underline">Become a Sponsor &rarr;</a>
+				<a href="/sponsors" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Become a Sponsor &rarr;</a>
 			</p>
 		</div>
 	</section>
 
 	<!-- Technology Partner Callout -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-blue-50">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-blue-50 dark:bg-blue-950">
 		<div class="max-w-3xl mx-auto text-center scroll-animate">
-			<p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-3">Technology Partner</p>
+			<p class="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wide mb-3">Technology Partner</p>
 			<a href="https://yetanothersoftwaresuite.com" target="_blank" rel="noopener noreferrer" class="inline-block mb-4">
 				<img src={yassImg.src} alt="Yet Another Software Suite" class="h-12 sm:h-16 mx-auto object-contain" />
 			</a>
-			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">Yet Another Software Suite</h2>
-			<p class="text-sm sm:text-base lg:text-lg text-neutral-700 leading-relaxed">
-				Yet Another Software Suite supports Camber Robotics both as a financial sponsor and as a technology partner, collaborating with our team on software tooling. This year, we teamed up to present together at the <span class="font-semibold text-neutral-900">FIRST World Championship</span>.
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4">Yet Another Software Suite</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+				Yet Another Software Suite (YASS) supports Camber Robotics both as a financial sponsor and as a technology partner &mdash; we're one of its founding teams. YASS provides flexible libraries and code generators that raise the floor for FRC teams, especially those lacking resources or experience, by simplifying programming and improving hardware compatibility. This year, we teamed up to present together at the <span class="font-semibold text-neutral-900 dark:text-white">FIRST World Championship</span>.
 			</p>
-			<!-- TODO: confirm specifics of the technical collaboration with Yet Another Software Suite and refine this copy. -->
 		</div>
 	</section>
 
 	<!-- Instagram Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
 		<div class="max-w-3xl mx-auto text-center scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-2">Follow Us</h2>
-			<p class="text-neutral-600 mb-8">
-				<a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:underline">@camber.9658</a>
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-2">Follow Us</h2>
+			<p class="text-neutral-600 dark:text-neutral-300 mb-8">
+				<a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">@camber.9658</a>
 				&mdash; see our latest photos below.
 			</p>
 			<!-- TODO: replace WIDGET_ID with a real SnapWidget feed ID for @camber.9658 (create one for free at snapwidget.com). LightWidget/Elfsight are drop-in swaps if preferred. -->
@@ -262,10 +273,10 @@ const awards = [
 				We're always looking for new students to join our team &mdash; no experience required.
 			</p>
 			<a
-				href="mailto:camberrobotics@gmail.com"
+				href="mailto:contact@camberrobotics.com"
 				class="inline-block rounded-md bg-white text-blue-600 font-semibold px-8 py-3 hover:bg-blue-50 transition-colors"
 			>
-				Email camberrobotics@gmail.com
+				Email contact@camberrobotics.com
 			</a>
 		</div>
 	</section>

@@ -4,26 +4,47 @@ import Layout from "../layouts/Layout.astro";
 
 const benefits = [
 	{
-		title: "Logo on Our Shirts",
-		description: "Your logo featured on the team shirts worn by all ~30 of our students at every competition and public event.",
-	},
-	{
-		title: "Logo on Our Robot",
-		description: "Your logo featured directly on our competition robot, seen by judges, teams, and spectators at every match.",
+		title: "Recognition at Every Level",
+		description: "Every sponsorship tier includes real recognition — from social shoutouts up to logo placement on our robot, pit signage, driver station, and team shirts.",
 	},
 	{
 		title: "Event Appearances",
-		description: "We represent and thank our sponsors at events throughout our regional boundary, from competitions to community outreach.",
+		description: "We represent and thank our sponsors at events throughout the greater San Antonio area, from robot demonstrations to community outreach.",
 	},
 	{
-		title: "Mentorship Welcome",
-		description: "Sponsorship doesn't have to be financial — we're just as excited to welcome hands-on mentors who want to share their engineering, business, or software expertise.",
+		title: "Mentors & In-Kind Support Welcome",
+		description: "Sponsorship doesn't have to be a check — we're just as excited to welcome hands-on mentors and in-kind donations of time, tools, or expertise.",
 	},
 ];
 
-const tiers = ["$5,000+", "$3,000", "$1,500", "$500"];
+const tiers = [
+	{ name: "Garden", price: "$100+", benefits: "Personalized thank-you note and a post on all our socials, plus a monthly update newsletter." },
+	{ name: "Coral", price: "$500+", benefits: "Everything in Garden, plus your logo on our team t-shirt and website." },
+	{ name: "Viper", price: "$1,000+", benefits: "Everything in Coral, plus a logo on our pit sign and driver station, and a mini merch kit." },
+	{ name: "Cobra", price: "$2,500+", benefits: "Everything in Viper, plus a logo on our robot and a free robot demonstration.*" },
+	{ name: "King", price: "$5,000+", benefits: "Everything in Cobra, plus a free in-person presentation,* volunteering for your organization,* and a premium gift package (including a hand-crocheted mascot)." },
+];
 
-const contactMailto = `mailto:camberrobotics@gmail.com?subject=${encodeURIComponent(
+const budget = [
+	{ label: "Registration", amount: 12000, percent: 32.9 },
+	{ label: "Travel", amount: 10900, percent: 29.8 },
+	{ label: "Parts & equipment", amount: 7000, percent: 19.2 },
+	{ label: "Food", amount: 5520, percent: 15.1 },
+	{ label: "Misc. essentials", amount: 1100, percent: 3 },
+];
+
+const inKindSupport = [
+	"Services, like CNC, powder coating, or printing stickers/banners/pins",
+	"Mentorship from experts in engineering, marketing, educating, or presenting",
+	"Unused devices like laptops, or utilities like drawers, tool carts, or shelves",
+	"Tools, manufacturing pieces, electrical components, or other raw materials",
+	"Invitations to events, for education and/or exposure",
+	"Food — snacks and meals for meetings and competitions",
+	"Venues for outreach events and/or practice",
+	"Exposure and promotion through news, social media, or other organizations",
+];
+
+const contactMailto = `mailto:contact@camberrobotics.com?subject=${encodeURIComponent(
 	"Sponsorship Inquiry - Camber Robotics 9658",
 )}&body=${encodeURIComponent(
 	"Hi Camber Robotics team,\n\nI'm interested in learning more about sponsoring FRC Team 9658.\n\n",
@@ -37,32 +58,44 @@ const contactMailto = `mailto:camberrobotics@gmail.com?subject=${encodeURICompon
 	url="https://camberrobotics.com/sponsors"
 >
 	<!-- Hero Section -->
-	<section class="bg-white py-16 sm:py-20 px-4 sm:px-6">
+	<section class="bg-white dark:bg-neutral-950 py-16 sm:py-20 px-4 sm:px-6">
 		<div class="max-w-3xl mx-auto text-center">
-			<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-neutral-900">
+			<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-neutral-900 dark:text-white">
 				Partner With Camber Robotics
 			</h1>
-			<p class="text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed mb-8">
+			<p class="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8">
 				FRC Team 9658 is looking for sponsors and mentors to help us keep building, competing, and growing robotics in San Antonio.
 			</p>
-			<a
-				href="mailto:camberrobotics@gmail.com"
-				class="inline-block rounded-md bg-blue-600 text-white font-semibold px-8 py-3 hover:bg-blue-700 transition-colors"
-			>
-				Become a Sponsor
-			</a>
+			<div class="flex flex-col sm:flex-row justify-center gap-4">
+				<a
+					href="mailto:contact@camberrobotics.com"
+					class="inline-block rounded-md bg-blue-600 text-white font-semibold px-8 py-3 hover:bg-blue-700 transition-colors"
+				>
+					Become a Sponsor
+				</a>
+				<a
+					href="/CamberRoboticsSponsorshipPacket2025-2026.pdf"
+					download
+					class="inline-block rounded-md border border-neutral-300 dark:border-neutral-600 text-neutral-800 dark:text-neutral-200 font-semibold px-8 py-3 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+				>
+					Download Sponsorship Packet
+				</a>
+			</div>
 		</div>
 	</section>
 
 	<!-- Why Sponsor Us Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
 		<div class="max-w-5xl mx-auto scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Why Sponsor Us</h2>
-			<div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-6 text-neutral-900 dark:text-white">Why Sponsor Us</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+				We're 100% self-funded &mdash; our school's previous robotics team disbanded due to funding issues, so sponsors are crucial to our sustainability. Your support doesn't just keep us competing: it funds outreach programs, hands-on learning, and mentorship that help young people pursue careers in STEM.
+			</p>
+			<div class="grid sm:grid-cols-3 gap-4 sm:gap-6">
 				{benefits.map((benefit) => (
-					<div class="bg-white border border-neutral-200 rounded-lg p-6 shadow-sm">
-						<h3 class="font-semibold text-lg text-neutral-900 mb-2">{benefit.title}</h3>
-						<p class="text-sm sm:text-base text-neutral-600 leading-relaxed">{benefit.description}</p>
+					<div class="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-6 shadow-sm">
+						<h3 class="font-semibold text-lg text-neutral-900 dark:text-white mb-2">{benefit.title}</h3>
+						<p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">{benefit.description}</p>
 					</div>
 				))}
 			</div>
@@ -70,74 +103,125 @@ const contactMailto = `mailto:camberrobotics@gmail.com?subject=${encodeURICompon
 	</section>
 
 	<!-- Sponsorship Levels Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
-		<div class="max-w-4xl mx-auto scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Sponsorship Levels</h2>
-			<div class="grid sm:grid-cols-4 gap-4 sm:gap-6">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white dark:bg-neutral-950">
+		<div class="max-w-3xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900 dark:text-white">Sponsorship Levels</h2>
+			<div class="space-y-4">
 				{tiers.map((tier) => (
-					<div class="bg-neutral-50 border border-neutral-200 rounded-lg p-6 text-center shadow-sm">
-						<p class="text-xl sm:text-2xl font-bold text-blue-600">{tier}</p>
+					<div class="bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+						<div class="sm:w-32 shrink-0">
+							<p class="font-bold text-lg text-neutral-900 dark:text-white">{tier.name}</p>
+							<p class="text-blue-600 dark:text-blue-400 font-semibold">{tier.price}</p>
+						</div>
+						<p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">{tier.benefits}</p>
 					</div>
 				))}
 			</div>
-			<p class="text-center text-sm sm:text-base text-neutral-500 mt-6">
-				Contact us at <a href="mailto:camberrobotics@gmail.com" class="text-blue-600 hover:underline">camberrobotics@gmail.com</a> to discuss what's included at each level.
+			<p class="text-center text-sm sm:text-base text-neutral-500 dark:text-neutral-400 mt-6">
+				* Restricted to the greater San Antonio area. In-kind donations will be taken into account &mdash; donations that are exclusively in-kind are valued based on value to our team.
+			</p>
+			<p class="text-center text-sm sm:text-base text-neutral-500 dark:text-neutral-400 mt-2">
+				Prefer to mail a check? Make it payable to <span class="font-semibold text-neutral-700 dark:text-neutral-300">"Keystone School Robotics"</span> and send it to 119 E Craig Pl, San Antonio, TX 78212.
+			</p>
+		</div>
+	</section>
+
+	<!-- Budget Transparency Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
+		<div class="max-w-2xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-2 text-neutral-900 dark:text-white">Where Your Support Goes</h2>
+			<p class="text-center text-sm sm:text-base text-neutral-500 dark:text-neutral-400 mb-8 sm:mb-10">
+				Our projected 2025&ndash;26 season expenses total <span class="font-semibold text-neutral-900 dark:text-white">$37,000</span>.
+			</p>
+			<div class="space-y-4">
+				{budget.map((item) => (
+					<div>
+						<div class="flex justify-between text-sm sm:text-base text-neutral-700 dark:text-neutral-300 mb-1">
+							<span>{item.label}</span>
+							<span class="font-semibold text-neutral-900 dark:text-white">${item.amount.toLocaleString()} ({item.percent}%)</span>
+						</div>
+						<div class="h-2 rounded-full bg-neutral-200 dark:bg-neutral-700 overflow-hidden">
+							<div class="h-full rounded-full bg-blue-600" style={`width: ${item.percent}%`}></div>
+						</div>
+					</div>
+				))}
+			</div>
+			<p class="text-sm sm:text-base text-neutral-500 dark:text-neutral-400 mt-8 leading-relaxed">
+				FRC is expensive: robot parts necessary for global competitiveness add up fast, like vision sensors ($900+) and competitive drivetrain modules ($2,000 per set). Transporting and feeding a team of 22 teenagers is pricey too, and an unmet travel budget falls onto students' own families. Your support is greatly appreciated.
 			</p>
 		</div>
 	</section>
 
 	<!-- This Year's Impact Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white dark:bg-neutral-950">
 		<div class="max-w-3xl mx-auto text-center scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-6">Our Impact</h2>
-			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed mb-4">
-				Beyond competition, our roughly <span class="font-semibold text-neutral-900">30 students</span> put in real work in the community. This year, we ran a <span class="font-semibold text-neutral-900">Youth Code Jam</span>, presented at the <span class="font-semibold text-neutral-900">San Antonio Manufacturing Association</span>, and helped present alongside Yet Another Software Suite at the <span class="font-semibold text-neutral-900">FIRST World Championship</span>.
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-6">Our Impact</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+				Beyond competition, our roughly <span class="font-semibold text-neutral-900 dark:text-white">20 students</span> put in real work in the community. This year, we presented at the <span class="font-semibold text-neutral-900 dark:text-white">San Antonio Manufacturing Association</span> and helped present alongside Yet Another Software Suite at the <span class="font-semibold text-neutral-900 dark:text-white">FIRST World Championship</span>.
 			</p>
-			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed mb-4">
-				We also volunteer at local FTC events and started our own FTC team at our middle school in 2026, extending robotics to younger students.
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+				We host monthly robotics events at South Side public libraries for elementary students, run a twice-monthly Coding Collaborative class for K&ndash;8 students, and bring robot demonstrations to local events like Youth Code Jam. In 2025, we started and now mentor FTC Team #31617 at our middle school, and we run an annual robotics summer camp.
 			</p>
-			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 leading-relaxed">
-				Our team has raised over <span class="font-semibold text-neutral-900">$10,000</span> in each of the last two seasons, and our members have logged <span class="font-semibold text-neutral-900">4,000+ volunteer hours</span> combined &mdash; support that helps us keep showing up.
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+				Our team has raised over <span class="font-semibold text-neutral-900 dark:text-white">$10,000</span> in each of the last two seasons, and our members have logged <span class="font-semibold text-neutral-900 dark:text-white">4,000+ volunteer hours</span> combined &mdash; support that helps us keep showing up.
 			</p>
 		</div>
 	</section>
 
 	<!-- Individual Donations Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-blue-50">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-blue-50 dark:bg-blue-950">
 		<div class="max-w-2xl mx-auto text-center scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">Individual Donations Welcome</h2>
-			<p class="text-sm sm:text-base lg:text-lg text-neutral-700 leading-relaxed mb-6">
-				A corporate sponsorship isn't the only way to help. Camber Robotics is a nonprofit, so individual donations of any size are tax-deductible and go directly toward competition fees, materials, and travel. Consult your tax advisor for details. We also welcome sponsorship and matching gifts through <span class="font-semibold text-neutral-900">Benevity</span> &mdash; if your employer partners with Benevity, email us and we'll help you get set up.
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4">Individual Donations Welcome</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+				A corporate sponsorship isn't the only way to help. Camber Robotics is a nonprofit, so individual donations of any size are tax-deductible and go directly toward competition fees, materials, and travel. Consult your tax advisor for details. We also welcome sponsorship and matching gifts through <span class="font-semibold text-neutral-900 dark:text-white">Benevity</span> &mdash; if your employer partners with Benevity, email us and we'll help you get set up.
 			</p>
 			<a
-				href="mailto:camberrobotics@gmail.com"
+				href="mailto:contact@camberrobotics.com"
 				class="inline-block rounded-md bg-blue-600 text-white font-semibold px-8 py-3 hover:bg-blue-700 transition-colors"
 			>
-				Email camberrobotics@gmail.com
+				Email contact@camberrobotics.com
 			</a>
 		</div>
 	</section>
 
+	<!-- Other Ways to Support Section -->
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white dark:bg-neutral-950">
+		<div class="max-w-3xl mx-auto scroll-animate">
+			<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white mb-4 text-center">Other Ways to Help</h2>
+			<p class="text-sm sm:text-base lg:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8 text-center">
+				Not everything we need comes from a check &mdash; every bit is appreciated.
+			</p>
+			<ul class="grid sm:grid-cols-2 gap-3 sm:gap-4">
+				{inKindSupport.map((item) => (
+					<li class="flex items-start gap-2 text-sm sm:text-base text-neutral-700 dark:text-neutral-300">
+						<span class="text-blue-600 dark:text-blue-400 mt-0.5">&#10003;</span>
+						<span>{item}</span>
+					</li>
+				))}
+			</ul>
+		</div>
+	</section>
+
 	<!-- Current Sponsors Section -->
-	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+	<section class="py-16 sm:py-20 px-4 sm:px-6 bg-neutral-50 dark:bg-neutral-900">
 		<div class="max-w-5xl mx-auto scroll-animate">
-			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900">Thank You to Our Sponsors</h2>
+			<h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral-900 dark:text-white">Thank You to Our Sponsors</h2>
 			<div class="flex justify-center items-center gap-6 sm:gap-10 flex-wrap">
 				{sponsors.map((sponsor) => (
 					<a
 						href={sponsor.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 rounded-lg px-4 hover:border-blue-600 transition-colors"
+						class="flex items-center justify-center h-20 sm:h-24 w-40 sm:w-48 border border-neutral-200 dark:border-neutral-700 rounded-lg px-4 bg-white dark:bg-neutral-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
 					>
 						{sponsor.logo ? (
 							<img
 								src={sponsor.logo.src}
 								alt={sponsor.name}
-								class={`max-h-14 sm:max-h-16 max-w-full object-contain ${sponsor.invert ? "invert" : ""}`}
+								class={`max-h-14 sm:max-h-16 max-w-full object-contain ${sponsor.filterClass || ""}`}
 							/>
 						) : (
-							<span class="text-neutral-700 font-semibold text-center text-sm sm:text-base">{sponsor.name}</span>
+							<span class="text-neutral-700 dark:text-neutral-300 font-semibold text-center text-sm sm:text-base">{sponsor.name}</span>
 						)}
 					</a>
 				))}

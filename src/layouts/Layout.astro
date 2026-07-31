@@ -4,6 +4,7 @@ import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import githubIcon from "../assets/github.svg";
 import instagramIcon from "../assets/Instagram.svg";
+import youtubeIcon from "../assets/youtube.svg";
 import Nav from "../components/Nav.astro";
 
 export interface Props {
@@ -24,6 +25,13 @@ const year = new Date().getFullYear();
 
 <html lang="en">
 <head>
+    <script is:inline>
+        const storedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -66,19 +74,22 @@ const year = new Date().getFullYear();
     <slot />
 </main>
 
-<footer class="bg-neutral-50 border-t border-neutral-200 text-neutral-700 py-10 px-6 text-center">
+<footer class="bg-neutral-50 dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 py-10 px-6 text-center">
     <div class="flex flex-col items-center gap-4">
-        <img src="/favicon.png" alt="Camber Robotics logo" class="w-10 h-10" />
+        <img src="/favicon.png" alt="Camber Robotics logo" class="w-10 h-10 dark:invert" />
         <div class="flex gap-4">
             <a href="https://www.instagram.com/camber.9658/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
-                <img src={instagramIcon.src} alt="Instagram" class="w-6 h-6" />
+                <img src={instagramIcon.src} alt="Instagram" class="w-6 h-6 invert dark:invert-0" />
+            </a>
+            <a href="https://youtu.be/xecPB4BlcM8" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
+                <img src={youtubeIcon.src} alt="YouTube" class="w-6 h-6 invert dark:invert-0" />
             </a>
             <a href="https://github.com/9658-Camber-Robotics/camber-website" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">
-                <img src={githubIcon.src} alt="GitHub" class="w-6 h-6" />
+                <img src={githubIcon.src} alt="GitHub" class="w-6 h-6 invert dark:invert-0" />
             </a>
         </div>
-        <a href="mailto:camberrobotics@gmail.com" class="font-semibold text-blue-600 hover:underline">camberrobotics@gmail.com</a>
-        <p class="text-neutral-500 text-sm">&copy; {year} Camber Robotics &mdash; FRC Team 9658</p>
+        <a href="mailto:contact@camberrobotics.com" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">contact@camberrobotics.com</a>
+        <p class="text-neutral-500 dark:text-neutral-400 text-sm">&copy; {year} Camber Robotics &mdash; FRC Team 9658</p>
     </div>
 </footer>
 
